@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body {
+            background: rgb(46, 43, 226);
+            font: normal 15px Arial;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 5px 5px 10px #0000004d;
+        }
+
+        header,
+        footer {
+            color: white;
+            text-align: center;
+        }
+
+        header {}
+
+        footer {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Vamos contar</h1>
+    </header>
+
+    <section>
+        <div>
+            <p>Inicio:<input type="number" name="" id="inicio" required></p>
+            <p>Fim:<input type="number" name="" id="fim" required></p>
+            <p>Passo:<input type="number" name="" id="passo"></p>
+            <input type="button" value="Contar" onclick="contar()">
+        </div>
+        <div>
+            <p>Contando:</p>
+            <p id="res"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Mathesu_veLi</p>
+    </footer>
+
+    <script>
+        function contar() {
+
+            let inicio = document.getElementById('inicio').value
+            let fim = document.getElementById('fim').value
+            let passo = document.getElementById('passo').value
+            let res = document.getElementById('res')
+            res.innerText = ''
+            if (inicio.length != 0 || fim.length != 0 || passo.length != 0) {
+                let i = Number(inicio)
+                let f = Number(fim)
+                let p = Number(passo)
+                if (p == 0) {
+                    p = 1
+                    alert('Passo invalido! Passo sendo contado como 1')
+                }
+                if (i < f) {
+                    for (let c = i; c <= f; c += p) {
+                        res.innerHTML += ` ${c} \u{1F449} `
+                    }
+
+                } else {
+                    for (let c = i; c >= f; c -= p) {
+                        res.innerHTML += ` ${c} \u{1F449} `
+                    }
+                }
+                res.innerText += ' \u{1F3C1}'
+            } else {
+                res.innerText = 'Falta de dados! Impossível contar'
+            }
+        }
+    </script>
+</body>
+
+</html>

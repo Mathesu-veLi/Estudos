@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+body
+{
+    background: black url(../../images/back-tablet.jpg) center center no-repeat fixed;
+    background-size: cover;
+}
+
+img#tablet {display: block;}
+
+
+img#phone, img#print, img#pc, img#tv
+{
+    display: none;
+}

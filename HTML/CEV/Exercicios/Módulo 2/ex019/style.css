@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+body
+{
+    background-color: hsl(125, 100%, 80%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    color: #008800;
+}
+
+h1#principal
+{
+    text-align: center;
+    background-color: rgb(4, 109, 0);
+    color: white;
+}
+
+h2
+{
+    color: #005500;
+}
+
+.basic
+{
+    color: royalblue;
+}
+
+.inter
+{
+    color: orangered;
+}
+
+.avan
+{
+    color: rebeccapurple;
+}
+
+.destaque
+{
+    background-color: rgba(155, 155, 86, 0.705);
+}

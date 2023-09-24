@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#burger
+{
+    display: none;
+}
+
+#itens
+{
+    transform: translate(0);
+    position: relative;
+}
+
+#itens li
+{
+    display: inline-block;
+    background-color: transparent;
+}
+
+#itens a
+{
+    color: black;
+}
+
+main
+{
+    width: 600px;
+    margin: auto;
+}

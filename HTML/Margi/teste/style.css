@@ -1,0 +1,49 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 15px;
+    margin: auto;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    display: flexbox;
+}
+
+html, body
+{
+    min-height: 100%;
+}
+
+.title
+{
+    width: 300px;
+    height: 350px;
+    background-color: rgb(120, 120, 120);
+}
+
+.title2
+{
+    width: 300px;
+    height: 350px;
+    background-color: rgb(120, 120, 120);
+}
+
+.pq
+{
+    background-color: black;
+    display: inline-flex;
+    border: 5px solid;
+}
+
+.pq2
+{
+    display: inline-flex;
+    border: 5px solid;
+    float: right;
+    position: relative;
+
+}
+

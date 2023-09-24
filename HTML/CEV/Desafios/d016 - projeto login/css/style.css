@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+*
+{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 1
+    'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html
+{
+    background-color: #5f2c82;
+    height: 100vh;
+    width: 100vh;
+    overflow: hidden;
+}
+
+main
+{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+section#login
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    overflow: hidden;
+    width: 300px;
+    height: 535px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: ease .5s;
+    transform: translate(-50%, -50%);
+}
+
+section#login > div#imagem
+{
+    display: block;
+    background: #5f2c82 url('../images/metal.jpg') left bottom no-repeat;
+    background-size: cover;
+    height: 200px;
+}
+
+#formulario
+{
+    display: block;
+    padding: 10px;
+}
+
+#formulario > h1
+{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.campo
+{
+    background-color: #5f2c82;
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #5f2c82;
+}
+
+.campo label
+{
+    display: none;
+}
+
+.campo i
+{
+    color: white;
+    font-size: 1.7em;
+    width: 40px;
+    padding: 5px;
+}
+
+.campo > input
+{
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+    padding: 4px;
+    transition: .3s;
+}
+
+.campo > input:focus-within
+{
+    background-color: white;
+    border: none;
+}
+
+form input[type=submit]
+{
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: #49a09d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form input[type=submit]:hover
+{
+    background-color: #2d6462;
+}
+
+.botao
+{
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #49a09d;
+}
+
+.botao:hover
+{
+    background-color: #6cd3cf;
+}
+
+.botao a
+{
+    color: #2d6462;
+    text-decoration: none;
+}
+
+.botao i
+{
+    font-size: 0.8em;
+}

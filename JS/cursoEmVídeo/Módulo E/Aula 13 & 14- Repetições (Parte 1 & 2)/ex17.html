@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Exercício</title>
+    <style>
+        body {
+            background: rgb(46, 43, 226);
+            font: normal 15px Arial;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 5px 5px 10px #0000004d;
+        }
+
+        header,
+        footer {
+            color: white;
+            text-align: center;
+        }
+
+        input {
+            height: 20px;
+            margin: 10px;
+        }
+
+        div input:nth-child(3) {
+            height: initial;
+            padding: 10px;
+            background-color: #d6cfcb;
+            color: black;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            transition: .3s;
+        }
+
+        div input:nth-child(3):hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+
+        select
+        {
+            display: none;
+        }
+
+        footer {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section multiple="multiple">
+        <div>
+            <p>Número: </p>
+            <input type="number" name="" id="num">
+            <input type="button" value="Gerar Tabuada" onclick="tabuada()">
+        </div>
+        <select id="select" size="10">Olá!</select>
+    </section>
+    <footer>
+        <p>&copy; Mathesu_veLi</p>
+    </footer>
+    <script>
+        var selection = document.getElementById('select')
+
+        function tabuada() {
+            selection.innerHTML = ''
+            let num = document.getElementById('num').value
+
+            if (num.length != 0) {
+                selection.style.display = 'block'
+                for (var c = 1; c <= 10; c++) {
+                    var option = document.createElement("option")
+                    option.text = `${Number(num)} x ${c} = ${Number(num) * c}`
+                    option.value = `tab${c}`
+                    selection.add(option)
+                }
+            } else
+            {
+                alert('Por favor, digite um número')
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de números</title>
+    <style>
+        body {
+            background: rgb(46, 43, 226);
+            font: normal 15px Arial;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 5px 5px 10px #0000004d;
+        }
+
+        header,
+        footer {
+            color: white;
+            text-align: center;
+        }
+
+        input {
+            height: 20px;
+            margin: 10px;
+        }
+
+        div input:nth-child(3) {
+            height: initial;
+            padding: 10px;
+            background-color: #d6cfcb;
+            color: black;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            transition: .3s;
+        }
+
+        div input:nth-child(3):hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+
+        select,
+        button {
+            display: none;
+        }
+
+        footer {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Analisador de números</h1>
+    </header>
+    <section multiple="multiple">
+        <div>
+            <p>Digite um valor entre 1 e 100: </p>
+            <input type="number" name="" id="num">
+            <input type="button" value="Adicionar número" onclick="adicionar()">
+        </div>
+        <select id="select" size="10">Olá!</select>
+        <button id="finalize" onclick="analisar()">Finalizar</button>
+        <div id="res" style="display: block; text-align: center;"></div>
+    </section>
+    <footer>
+        <p>&copy; Mathesu_veLi</p>
+    </footer>
+    <script>
+        var selection = document.getElementById('select')
+        var nums = Array()
+        let res = document.getElementById('res')
+        function adicionar() {
+            let num = document.getElementById('num').value
+            let n = Number(num)
+            if (num.length != 0 && nums.indexOf(n) == -1 && n <= 100 && n >= 1) {
+                selection.style.display = 'block'
+                document.getElementById('finalize').style.display = 'block'
+                var option = document.createElement("option")
+                option.text = `O valor ${num} foi adicionado`
+                option.value = `tab${num}`
+                selection.add(option)
+                nums.push(n)
+                res.innerHTML = ''
+            } else {
+                alert('O valor digitado é invalido ou já fora adicionado anteriormente')
+            }
+        }
+        function analisar()
+        {
+            res.innerHTML = ''
+            total = 0
+            for(var c in nums)
+            {
+                total += nums[c]
+            }
+            media = total / nums.length
+            p1.innerHTML = `Foram digitados ${nums.length} números`
+            p2.innerHTML += `O maior número digitado foi ${Math.max.apply(null, nums)}`
+            p3.innerHTML += `O menor número digitado foi ${Math.min.apply(null, nums)}`
+            p4.innerHTML += `A soma desses números tem como resultado o número ${total}`
+            p5.innerHTML += `A média dos valores digitados é ${media}`
+
+        }
+    </script>
+</body>
+
+</html>

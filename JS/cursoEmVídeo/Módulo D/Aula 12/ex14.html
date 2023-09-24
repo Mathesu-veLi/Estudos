@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do dia</title>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #FEFAE0;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+            color: white;
+        }
+        .container
+        {
+            display: flex;
+            flex-direction: column;
+            box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            background-color: wheat;
+            width: 600px;
+            height: 600px;
+            align-items: center;
+        }
+        .container h1, h2
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .container img
+        {
+            clip-path: circle();
+            padding-left: 200px;
+        }
+        
+        footer
+        {
+            padding: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Hora do dia</h1>
+        </header>
+        <section>
+            <h2 id="time">São </h2>
+            <img id="img" src="https://www.reportersul.com.br/uploads/images/2020/07/mais-um-dia-de-sol-e-temperatura-elevada-em-sc-1595502961.jpg" alt="" width="600">
+        </section>
+    </div>
+
+    <footer>
+        <center>
+            &copy; Mathesu_veLi
+        </center>
+    </footer>
+
+    <script>
+        var now = new Date()
+        var div = document.querySelector('.container')
+        div.querySelector('h2').innerHTML += `${now.getHours()}:${now.getMinutes()}`
+        var hr = now.getHours()
+        var img = div.querySelector("img")
+        if(hr >= 12 && hr <= 18)
+        {
+            img.setAttribute('src', 'https://torange.biz/photo/36/HD/sunset-evening-sun-36502.jpg')
+            document.body.style.backgroundColor = '#94420f'
+            div.style.backgroundColor = '#974e00'
+        } else if (hr < 24 && hr > 18)
+        {
+            img.setAttribute('src', 'https://img.freepik.com/fotos-premium/noite-na-praia-com-barco-e-luar_104785-846.jpg')
+            img.style.padding = '0'
+            document.body.style.backgroundColor = '#14213D'
+            div.style.backgroundColor = '#03071E'
+            div.querySelector('h1').style.color = 'white'
+            div.querySelector('h2').style.color = 'white'
+        }
+
+        setInterval(function()
+        {
+            location.reload()
+        }, 500)
+    </script>
+</body>
+</html>

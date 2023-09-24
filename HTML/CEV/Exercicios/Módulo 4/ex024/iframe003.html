@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe {
+            width: 95vw;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Faça uma escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quae odit totam delectus officia, sapiente
+        sint expedita ea esse rem vero incidunt itaque facilis laboriosam soluta in. Quibusdam, voluptatem animi?</p>
+
+    <ul>
+        <li><a href="pages/page001.html" target="frame">1° Página</a></li>
+        <li><a href="pages/page002.html" target="frame">2° Página</a></li>
+        <li><a href="pages/page003.html" target="frame">3° Página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam dolor temporibus odit sequi commodi soluta animi
+        eligendi cupiditate nam, laborum optio, architecto dicta ex, deleniti aspernatur rem dolore sint! Eveniet?
+    </p>
+    <iframe src=""
+        srcdoc="<h1>Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ea officiis quibusdam, expedita natus dolorum necessitatibus dolores quod reprehenderit molestias enim rem vel, impedit officia. Officia ipsam recusandae ad repellendus.</p>"
+        name="frame" frameborder="0">
+        <p>Infelizmente seu navegador não é compativel com isso!</p>
+    </iframe>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus sapiente inventore dolore qui, voluptatibus
+        numquam molestias dolor cum itaque ipsum officia nemo quidem assumenda, distinctio odit ipsam tempore id quasi.
+    </p>
+
+</body>
+
+</html>

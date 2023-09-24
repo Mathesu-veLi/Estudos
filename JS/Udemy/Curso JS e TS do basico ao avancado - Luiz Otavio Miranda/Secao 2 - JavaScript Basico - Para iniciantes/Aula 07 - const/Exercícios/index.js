@@ -1,0 +1,10 @@
+const nome = 'Matheus Levi';
+const sobrenome = 'Fernandes da Silva';
+const anoDeNascimento = 2010;
+let idade = 2023 - anoDeNascimento;
+let peso = 50.7;
+let alturaEmMetros = 1.54;
+let índiceMassaCorporal;
+índiceMassaCorporal = peso / (alturaEmMetros * alturaEmMetros);
+console.log(`${nome} ${sobrenome} tem ${idade}, pesa ${peso}kg, tem ${alturaEmMetros} de altura e seu IMC é de ${índiceMassaCorporal}`);
+console.log(`${nome} nasceu em ${anoDeNascimento}`);

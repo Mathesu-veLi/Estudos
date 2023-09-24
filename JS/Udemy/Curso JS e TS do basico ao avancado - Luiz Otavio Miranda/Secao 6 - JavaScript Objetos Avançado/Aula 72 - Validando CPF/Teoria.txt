@@ -1,0 +1,29 @@
+Cada número do CPF * um número da sequencia de um a 10, somar os resultados e fazer o calculo pela fórmula: 11 - ({Resultado da soma} % 11) = {Primeiro dígito}, levando em consideração que, caso o resultado for maior que 9, o primeiro dígito é 0. Exemplo:
+                                                                                                705.484.450:
+                                                                                                    7 * 10 = 70 +
+                                                                                                    0 *  9 = 0  +
+                                                                                                    5 *  8 = 40 +
+                                                                                                    4 *  7 = 28 +
+                                                                                                    8 *  6 = 48 +
+                                                                                                    4 *  5 = 20 +
+                                                                                                    4 *  4 = 16 +
+                                                                                                    5 *  3 = 15 +
+                                                                                                    0 *  2 = 0  = 237
+
+                                                                                                    11 - (237 % 11) = 5 (Primeiro dígito)
+Depois, basta fazer a mesma coisa, dessa vez adicionando o primeiro dígito ao final e começando a sequencia por 11. Exemplo:
+                                                                                                                        705.484.450-5:
+                                                                                                                            7 * 11 = 77 +
+                                                                                                                            0 * 10 = 0  +
+                                                                                                                            5 *  9 = 45 +
+                                                                                                                            4 *  8 = 32 +
+                                                                                                                            8 *  7 = 56 +
+                                                                                                                            4 *  6 = 24 +
+                                                                                                                            4 *  5 = 20 +
+                                                                                                                            5 *  4 = 20 +
+                                                                                                                            0 *  3 = 0  +
+                                                                                                                            5 *  2 = 10 = 284
+
+                                                                                                                            11 - (284 % 11) = 2 (Segundo dígito)
+
+CPF completo = 705.484.450-52

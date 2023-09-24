@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header, footer
+{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+header h1
+{
+    font-size: 3em;
+    font-weight: 400;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+a:hover
+{
+    text-decoration: underline;
+    color: #eee;
+}
+
+
+section
+{
+    padding: 10vh 30px;
+    line-height: 4em;
+}
+
+section p
+{
+    font-size: 2.5em;
+    font-family: 'Sriracha', cursive;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.img
+{
+    color: white;
+    box-shadow: inset 6px 6px 15px 0 rgba(0, 0, 0, 0.8);
+}
+
+#a
+{
+    background: #414141 url('../images/background001.jpg') center center no-repeat fixed;
+    background-size: cover;
+}
+
+#b
+{
+    background: #414141 url('../images/background002.jpg') center center no-repeat fixed;
+    background-size: cover;
+}
+
+.img p
+{
+    background: #333;
+    padding: 5px;
+    display: inline-block;
+}
+
+footer
+{
+    padding: 10px;
+}
