@@ -1,8 +1,11 @@
 // g - global (encontra todas as ocorrências)
 // i - insensitive (lower or upper case)
+// () grupos
+// | ou
 
 const { texto } = require('./base');
 
-const regExp1 = /João/gi;
+const regExp1 = /(maria|joão|luiz)(, hoje sua esposa)/i;
+const found = regExp1.exec(texto);
 
-console.log(regExp1.test(texto));
+if (found) console.log(found);
