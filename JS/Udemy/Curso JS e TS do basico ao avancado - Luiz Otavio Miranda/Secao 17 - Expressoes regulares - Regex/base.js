@@ -5,6 +5,17 @@ Foi um ano excelente na vida de joão. Teve 5 filhos, todos adultos atualmente. 
 Não canso de ouvir a Maria:
 "Joooooooooãooooooo, o café tá prontinho aqui. Veeemm"!`;
 
+const arquivos = [
+  'Atenção.jpg',
+  'FOTO.jpeg',
+  'Meu gatinho.jpg',
+  'Meu gatinho.JPG',
+  'Meu gatinho.JPEG',
+  'Marido.png',
+  'lista de compras.txt',
+];
+
 module.exports = {
   texto,
+  arquivos,
 };
