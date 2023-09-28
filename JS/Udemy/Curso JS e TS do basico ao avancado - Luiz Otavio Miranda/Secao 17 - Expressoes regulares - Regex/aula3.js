@@ -13,7 +13,7 @@ const regExp1 = /Jo+ão+/gi;
 console.log(texto);
 console.log(texto.match(regExp1));
 
-const regExp2 = /\.(jpg|jpeg)/gi;
+const regExp2 = /\.(jpe?g)/gi;
 
 for (const arquivo of arquivos) {
   console.log('');
