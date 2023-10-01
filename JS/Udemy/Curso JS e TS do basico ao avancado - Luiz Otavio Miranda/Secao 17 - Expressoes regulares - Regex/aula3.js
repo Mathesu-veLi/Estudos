@@ -1,8 +1,8 @@
 /*
   Quantificadores:
-    * (opcional)
-    + (obrigatório)
-    ? (opcional)
+    * - 0 ou mais (opcional)
+    + - 1 ou mais (obrigatório)
+    ? - 0 ou 1 (opcional)
     \ Caractere de escape
 */
 
@@ -16,6 +16,10 @@ console.log(texto.match(regExp1));
 const regExp2 = /\.(jpe?g)/gi;
 
 for (const arquivo of arquivos) {
+  const válido = arquivo.match(regExp2);
+
+  if(!válido) continue;
+
   console.log('');
   console.log(arquivo, arquivo.match(regExp2));
 }
