@@ -1,15 +1,15 @@
-número = int(input('Digite um número inteiro: '))
-base = int(input('''Se quiser converter esse número em:
+number = int(input('Digite um número inteiro: '))
+convertTo = int(input('''Se quiser converter esse número em:
                  Binário:  Digite 1
                  Octal:  Digite 2
                  Hexadecimal:  Digite 3
                  Escolha: '''))
-if base == 1:
-    bin = bin(número)
-    print(f'{número} em binário é {bin[2:]}')
-elif base == 2:
-    octal = oct(número)
-    print(f'{número} em octal é {octal[2:]}')
-elif base == 3:
-    hexa = hex(número)
-    print(f'{número} em hexadecimal é {hexa[2:]}')
+if convertTo == 1:
+    bin = bin(number)
+    print(f'{number} em binário é {bin[2:]}')
+elif convertTo == 2:
+    octal = oct(number)
+    print(f'{number} em octal é {octal[2:]}')
+elif convertTo == 3:
+    hexa = hex(number)
+    print(f'{number} em hexadecimal é {hexa[2:]}')

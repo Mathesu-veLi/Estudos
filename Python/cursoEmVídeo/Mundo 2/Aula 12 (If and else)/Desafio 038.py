@@ -1,9 +1,9 @@
-primeiroNúmero = int(input('Digite um número: '))
-segundoNúmero = int(input('Digite outro número: '))
+firstNumber = int(input('Digite um número: '))
+secondNumber = int(input('Digite outro número: '))
 
-if primeiroNúmero > segundoNúmero:
-    print(f'O número {primeiroNúmero} é o maior valor')
-elif primeiroNúmero < segundoNúmero:
-    print(f'O número {segundoNúmero} é o maior valor')
+if firstNumber > secondNumber:
+    print(f'O número {firstNumber} é o maior valor')
+elif firstNumber < secondNumber:
+    print(f'O número {secondNumber} é o maior valor')
 else:
     print('Os dois valores são iguais')

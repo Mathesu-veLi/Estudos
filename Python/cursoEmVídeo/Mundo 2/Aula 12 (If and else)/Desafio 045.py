@@ -1,15 +1,16 @@
 from random import choice
 
 
-jogadaDoComputador = choice(['Pedra', 'Papel', 'Tesoura'])
+choiceOfTheComputer = choice(['Pedra', 'Papel', 'Tesoura'])
 
-user = str(input('Vamos brincar de Jokempô! Escolha pedra, papel ou tesoura e tente me vencer!: ')).strip().capitalize()
+choiceOfTheUser = str(input('Vamos brincar de Jokempô! Escolha pedra, papel ou tesoura e tente me vencer!: ')).strip().capitalize()
 
-print(f"O computador escolheu {jogadaDoComputador}!")
-if user == jogadaDoComputador:
+print(f"O computador escolheu {choiceOfTheComputer}!")
+
+if choiceOfTheUser == choiceOfTheComputer:
     print('Empatou!')
     
-elif user == 'Pedra' and jogadaDoComputador == 'Tesoura' or user == 'Papel' and jogadaDoComputador == 'Pedra' or user == 'Tesoura' and jogadaDoComputador == 'Papel':
+elif choiceOfTheUser == 'Pedra' and choiceOfTheComputer == 'Tesoura' or choiceOfTheUser == 'Papel' and choiceOfTheComputer == 'Pedra' or choiceOfTheUser == 'Tesoura' and choiceOfTheComputer == 'Papel':
     print('Você venceu!')
 
 else:

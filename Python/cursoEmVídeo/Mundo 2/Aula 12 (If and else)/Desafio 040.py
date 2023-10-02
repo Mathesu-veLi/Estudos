@@ -1,7 +1,10 @@
-primeiraNota = float(input('Digite a nota do 1° bimestre: '))
-segundaNota = float(input('Agora a nota do 2° bimestre: '))
-média = (primeiraNota + segundaNota) / 2
-if média < 6:
-    print('\033[31mREPROVADO\033[m')
+firstGrade = float(input('Digite a nota do 1° bimestre: '))
+secondGrade = float(input('Agora a nota do 2° bimestre: '))
+average = (firstGrade + secondGrade) / 2
+
+print(f'Sua média foi {average}')
+
+if average < 6:
+    print('Você foi REPROVADO!')
 else:
-    print('\033[32mAPROVADO\033[m')
+    print('Você foi APROVADO!')
