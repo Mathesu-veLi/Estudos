@@ -1,7 +1,9 @@
 from random import randint
-número = randint(0, 5)
-resposta = int(input('A maquina pensou em um número de 0 a 5, sabe dizer qual foi esse número? Digite aqui!: '))
-if resposta == número:
+
+
+randomNumber = randint(0, 5)
+response = int(input('A maquina pensou em um número de 0 a 5, sabe dizer qual foi esse número? Digite aqui!: '))
+if response == randomNumber:
     print('Parabéns!! Você acertou!')
 else:
-    print(f'Que pena! Você errou! A resposta era {número}')
+    print(f'Que pena! Você errou! A resposta era {randomNumber}')

@@ -1,5 +1,12 @@
 from math import sin, cos, tan
 
 
-número = float(input('Digite um ângulo para ver seu seno, cosseno e tangente: '))
-print(f'O seno de {número:.2f}° é {sin(número):.3f}\nO cosseno é {cos(número):.3f}\nE o tangente é {tan(número):.3f}')
+angle = str(input('Digite um ângulo para ver seu seno, cosseno e tangente: '))
+angle = angle.replace('°', '')
+
+try:
+    angle = float(angle)
+except:
+    print('Digite um valor válido (ex: 45)')
+
+print(f'O seno de {angle:.2f}° é {sin(angle):.3f}\nO cosseno é {cos(angle):.3f}\nE o tangente é {tan(angle):.3f}')

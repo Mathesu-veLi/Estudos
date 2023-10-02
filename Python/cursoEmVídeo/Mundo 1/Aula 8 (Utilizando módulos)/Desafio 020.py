@@ -1,8 +1,11 @@
 from random import shuffle
 
 
-alunos = []
-for c in range(1, 5):
-    alunos.append(str(input(f'Digite o nome do {c}° aluno: ')))
-shuffle(alunos)
-print(f'A ordem dos alunos escolhida foi: {alunos}')
+students = []
+for student in range(1, 5):
+    students.append(str(input(f'Digite o nome do {student}° aluno: ')))
+shuffle(students)
+
+print(f'A ordem dos alunos escolhida foi: ', end='')
+for student in students:
+    print(student, end=' ')

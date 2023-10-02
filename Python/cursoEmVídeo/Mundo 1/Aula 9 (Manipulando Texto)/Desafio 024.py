@@ -1,5 +1,5 @@
-cidade = str(input('Qual o nome da sua cidade?: ')).lower().strip().split()
-if 'santo' in cidade[0]:
-    print('Então sua cidade tem o nome "Santo" em seu começo ne?')
+city = str(input('Qual o nome da sua cidade?: ')).lower().strip().split()
+if 'santo' in city[0]:
+    print('Sua cidade tem \'Santo\' nela')
 else:
-    print('Uma pena que sua cidade não tem o nome "Santo" no começo dela')
+    print('Uma pena que sua cidade não tem o nome \'Santo\' em seu nome')

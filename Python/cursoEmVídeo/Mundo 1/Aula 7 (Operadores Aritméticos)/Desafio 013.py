@@ -1,3 +1,3 @@
-salario = float(input('Qual seu salário?: R$'))
-salarioComAumento = (salario * 0.15) + salario 
-print(f'Se você recebesse 15% de aumento, receberia R${salarioComAumento:.2f}')
+salary = float(input('Qual seu salário?: R$'))
+salaryWithIncrease = (salary * 0.15) + salary 
+print(f'Se você recebesse 15% de aumento, receberia R${salaryWithIncrease:.2f}')

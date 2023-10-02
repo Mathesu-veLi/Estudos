@@ -1,7 +1,8 @@
-reta1 = float(input('Digite o comprimento da 1° reta: '))
-reta2 = float(input('Digite o comprimento da 2° reta: '))
-reta3 = float(input('Digite o comprimento da 3° reta: '))
-if reta1 < reta2 + reta3 and reta2 < reta1 + reta3 and reta3 < reta1 + reta2:
-    print('Dá para fazer um triangulo com essas retas')
+firstStraight = float(input('Digite o comprimento da 1° reta: '))
+secondStraight = float(input('Digite o comprimento da 2° reta: '))
+thirdStraight = float(input('Digite o comprimento da 3° reta: '))
+
+if firstStraight < secondStraight + thirdStraight and secondStraight < firstStraight + thirdStraight and thirdStraight < firstStraight + secondStraight:
+    print('É possível fazer um triângulo com essas retas')
 else:
-    print('Não dá para fazer um triangulo com essas retas')
+    print('Não é possível fazer um triângulo com essas retas')

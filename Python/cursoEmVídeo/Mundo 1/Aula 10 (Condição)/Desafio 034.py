@@ -1,7 +1,8 @@
-salário = float(input('Digite aqui seu salário: R$'))
-if salário > 1250:
-    aumento = salário * 0.10 + salário
-    print(f'Seu salário com 10% de aumento ficaria R${aumento:.2f}')
+salary = float(input('Digite aqui seu salário: R$'))
+
+if salary > 1250:
+    increase = (salary * 0.10) + salary
+    print(f'Seu salário com 10% de aumento ficaria R${increase:.2f}')
 else:
-    aumento = salário * 0.15 + salário
-    print(f'Seu salário com 15% de aumento ficaria R${aumento:.2f}')
+    increase = (salary * 0.15) + salary
+    print(f'Seu salário com 15% de aumento ficaria R${increase:.2f}')
