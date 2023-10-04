@@ -1,11 +1,15 @@
 from datetime import date
-pessoasMaioresDeIdade = 0
-pessoasMenoresDeIdade = 0
+
+
+peopleOfLegalAge = 0
+underagePeople = 0
+
 for c in range(1, 8):
-    anoDeNascimento = int(input(f'Digite o ano de nascimento da {c}° pessoa: '))
-    if anoDeNascimento <= date.today().year - 18:
-        pessoasMaioresDeIdade += 1
+    yearOfBirth = int(input(f'Digite o ano de nascimento da {c}° pessoa: '))
+    if yearOfBirth <= date.today().year - 18:
+        peopleOfLegalAge += 1
     else:
-        pessoasMenoresDeIdade += 1
-print(f'{pessoasMaioresDeIdade} pessoas são maior de idade')
-print(f'{pessoasMenoresDeIdade} pessoas são menor de idade')
+        underagePeople += 1
+        
+print(f'{peopleOfLegalAge} pessoas são maior de idade')
+print(f'{underagePeople} pessoas são menor de idade')

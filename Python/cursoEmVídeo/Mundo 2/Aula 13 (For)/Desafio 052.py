@@ -1,10 +1,8 @@
-totalDeNúmerosDivisíveis = 0
-número = int(input('Digite um número: '))
-for c in range(1, número + 1):
-    if número % c == 0:
-        totalDeNúmerosDivisíveis += 1
-print(f'O número {número} foi divisível por {totalDeNúmerosDivisíveis} números, logo, ele', end=' ')
-if totalDeNúmerosDivisíveis == 2:
-    print('é um número primo')
-else:
-    print('não é um número primo')
+totalOfDivisibleNumbers = 0
+number = int(input('Digite um número: '))
+for c in range(1, number + 1):
+    totalOfDivisibleNumbers += 1 if number % c == 0 else None
+
+print(f'O número {number} foi divisível por {totalOfDivisibleNumbers} números, logo, ele', end=' ')
+totalOfDivisibleNumbers != 2 and print('não', end=' ')
+print('é um número primo')
