@@ -1,26 +1,29 @@
-from math import floor
+averageBetweenAges = olderAgeAmongMen = womenOverTwentyYearsOld = 0
+nameOfTheOldestMan = ''
 
-médiaEntreAsIdades = maiorIdadeDentreOsHomens = mulheresMaioresDe20Anos = 0
-nomeDoHomemMaisVelho = ''
-
-for p in range(1, 5):
-    print(f'{p}° pessoa')
+for quantifier in range(1, 5):
+    print(f'\n {quantifier}° pessoa')
     
-    nomeDaPessoaAtual = str(input('Nome: ')).strip().capitalize()
-    idadeDaPessoaAtual = int(input('Idade: '))
-    sexoDaPessoaAtual = str(input('Sexo [M/F]: ')).lower().strip()
-    médiaEntreAsIdades += idadeDaPessoaAtual
+    nameOfPerson = str(input('Nome: ')).strip().capitalize()
+    ageOfPerson = int(input('Idade: '))
     
-    if p == 1 and 'm' in sexoDaPessoaAtual:
-        maiorIdadeDentreOsHomens = idadeDaPessoaAtual
-        nomeDoHomemMaisVelho = nomeDaPessoaAtual
-    elif sexoDaPessoaAtual == 'm' and idadeDaPessoaAtual > maiorIdadeDentreOsHomens:
-        maiorIdadeDentreOsHomens = idadeDaPessoaAtual
-        nomeDoHomemMaisVelho = nomeDaPessoaAtual
-    if 'f' in sexoDaPessoaAtual and idadeDaPessoaAtual > 20:
-        mulheresMaioresDe20Anos += 1
+    while True:
+        genderOfPerson = str(input('Gênero [M/F]: ')).lower().strip()
+        
+        if 'm' in genderOfPerson or 'f' in genderOfPerson: 
+            break
+        print('Digite M para o gênero masculino e F para o gênero feminino')
+    
+    averageBetweenAges += ageOfPerson
+    
+    if 'm' in genderOfPerson and (quantifier == 1 or ageOfPerson > olderAgeAmongMen):
+        olderAgeAmongMen = ageOfPerson
+        nameOfTheOldestMan = nameOfPerson
+    
+    if 'f' in genderOfPerson and ageOfPerson > 20:
+        womenOverTwentyYearsOld += 1
 
-médiaEntreAsIdades /= 4
-print(f'A media da idade do grupo é de {floor(médiaEntreAsIdades)} anos (arredondado para baixo)')
-print(f'O homem mais velho tem {maiorIdadeDentreOsHomens} anos e o nome dele é {nomeDoHomemMaisVelho}')
-print(f'E ao todo, são {mulheresMaioresDe20Anos} mulheres com menos de 20 anos')
+averageBetweenAges /= 4
+print(f'A media da idade do grupo é de {averageBetweenAges:.2f} anos')
+print(f'O homem mais velho tem {olderAgeAmongMen} anos e o nome dele é {nameOfTheOldestMan}')
+print(f'E ao todo, são {womenOverTwentyYearsOld} mulheres com menos de 20 anos')

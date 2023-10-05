@@ -1,4 +1,5 @@
 pairNumbers = []
+
 for quantifier in range(1, 7):
     number = int(input(f'Digite o {quantifier}° número: '))
     if number % 2 == 0:

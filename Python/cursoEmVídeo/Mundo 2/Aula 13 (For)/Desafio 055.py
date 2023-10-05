@@ -1,5 +1,6 @@
-pesosLidos = []
-for c in range(1, 6):
-    pesoDaPessoa = float(input(f'Qual o peso da {c}° pessoa?'))
-    pesosLidos.append(pesoDaPessoa)
-print(f'O menor peso lido foi {min(pesosLidos)}kg e o maior foi {max(pesosLidos)}kg')
+enteredWeights = []
+for quantifier in range(1, 6):
+    weightOfPerson = float(input(f'Qual o peso da {quantifier}° pessoa?'))
+    enteredWeights.append(weightOfPerson)
+    
+print(f'O menor peso lido foi {min(enteredWeights)}kg e o maior foi {max(enteredWeights)}kg')
