@@ -1,4 +1,4 @@
-firstNumber = int(input('Digite um número inteiro: '))
-secondNumber = int(input('Digite outro número inteiro: '))
-sum = firstNumber + secondNumber
-print(f'A soma de {firstNumber} + {secondNumber} é igual a {sum}')
+first_number = int(input('Digite um número inteiro: '))
+second_number = int(input('Digite outro número inteiro: '))
+sum = first_number + second_number
+print(f'A soma de {first_number} + {second_number} é igual a {sum}')
