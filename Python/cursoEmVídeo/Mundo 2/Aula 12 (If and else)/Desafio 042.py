@@ -1,12 +1,12 @@
-firstStraight = float(input('Digite o comprimento da 1° reta: '))
-secondStraight = float(input('Digite o comprimento da 2° reta: '))
-thirdStraight = float(input('Digite o comprimento da 3° reta: '))
+first_straight = float(input('Digite o comprimento da 1° reta: '))
+second_straight = float(input('Digite o comprimento da 2° reta: '))
+third_straight = float(input('Digite o comprimento da 3° reta: '))
 
-if firstStraight < secondStraight + thirdStraight and secondStraight < firstStraight + thirdStraight and thirdStraight < firstStraight + secondStraight:
+if first_straight < second_straight + third_straight and second_straight < first_straight + third_straight and third_straight < first_straight + second_straight:
     print('As retas acima podem formar um triângulo ', end='')
-    if firstStraight == secondStraight == thirdStraight:
+    if first_straight == second_straight == third_straight:
         print('Equilátero')
-    elif firstStraight != secondStraight != thirdStraight != firstStraight:
+    elif first_straight != second_straight != third_straight != first_straight:
         print('Escaleno')
     else:
         print('Isósceles')
