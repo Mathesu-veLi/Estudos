@@ -1,13 +1,19 @@
-confirmaçãoDeContinuação = 's'
-médiaDosNúmeros = contador = 0
-númerosDigitados = []
+continuation_confirmation = 's'
+average_of_numbers = 0
+typed_numbers = []
 
-while 's' in confirmaçãoDeContinuação:
-    número = int(input('Digite um valor: '))
-    médiaDosNúmeros += número
-    contador += 1
-    númerosDigitados.append(número)
-    confirmaçãoDeContinuação = str(input('Quer continuar? [S/N]: ')).lower().strip()
+while True:
+    number = int(input('Digite um valor: '))
+    average_of_numbers += number
+    typed_numbers.append(number)
+    
+    while True:
+        continuation_confirmation = str(input('Quer continuar? [S/N]: ')).lower().strip()
+        if 's' in continuation_confirmation or 'n' in continuation_confirmation:
+            break
+    
+    if 'n' in continuation_confirmation:
+        break
 
-médiaDosNúmeros /= contador
-print(f'O maior número digitado foi {max(númerosDigitados)} e o menor foi {min(númerosDigitados)}, e a media desses números é {médiaDosNúmeros:.2f}')
+average_of_numbers /= len(typed_numbers)
+print(f'O maior número digitado foi {max(typed_numbers)} e o menor foi {min(typed_numbers)}, e a média desses números é {average_of_numbers:.2f}')

@@ -1,10 +1,12 @@
-termos = int(input('Quantos termos você quer mostrar?: '))
-contador = último = 0
-penúltimo = 1
-while contador != termos:
-    número = último
-    print(f'{número} -> ', end='')
-    último = penúltimo + número
-    penúltimo = número
-    contador += 1
+terms = int(input('Quantos termos você quer mostrar?: '))
+counter = last_number = 0
+penultimate_number = 1
+
+while counter != terms:
+    number = last_number
+    print(f'{number} -> ', end='')
+    
+    last_number = penultimate_number + number
+    penultimate_number = number
+    counter += 1
 print('FIM')
