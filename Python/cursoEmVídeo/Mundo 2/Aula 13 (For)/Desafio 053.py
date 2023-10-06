@@ -5,5 +5,7 @@ for char in ".!?,- ":
 print(f'A frase digitada ao contrario é {text[::-1]}')
 print('A frase digitada', end=' ')
 
-text[::-1] != text and print('não', end=' ')
-print('é um palíndromo')
+if text[::-1] != text: 
+        print('não é um palíndromo')
+else:
+        print('é um palíndromo')

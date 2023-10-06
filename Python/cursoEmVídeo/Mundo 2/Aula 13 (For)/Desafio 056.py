@@ -1,29 +1,31 @@
-averageBetweenAges = olderAgeAmongMen = womenOverTwentyYearsOld = 0
-nameOfTheOldestMan = ''
+average_between_ages = older_age_among_men = women_over_twenty_years_old = 0
+name_of_the_oldest_man = ''
 
-for quantifier in range(1, 5):
-    print(f'\n {quantifier}° pessoa')
-    
-    nameOfPerson = str(input('Nome: ')).strip().capitalize()
-    ageOfPerson = int(input('Idade: '))
-    
+for iterator in range(1, 5):
+    print(f'\n {iterator}° pessoa')
+
+    name_of_person = str(input('Nome: ')).strip().capitalize()
+    age_of_person = int(input('Idade: '))
+
     while True:
-        genderOfPerson = str(input('Gênero [M/F]: ')).lower().strip()
-        
-        if 'm' in genderOfPerson or 'f' in genderOfPerson: 
+        gender_of_person = str(input('Gênero [M/F]: ')).lower().strip()
+
+        if 'm' in gender_of_person or 'f' in gender_of_person:
             break
         print('Digite M para o gênero masculino e F para o gênero feminino')
-    
-    averageBetweenAges += ageOfPerson
-    
-    if 'm' in genderOfPerson and (quantifier == 1 or ageOfPerson > olderAgeAmongMen):
-        olderAgeAmongMen = ageOfPerson
-        nameOfTheOldestMan = nameOfPerson
-    
-    if 'f' in genderOfPerson and ageOfPerson > 20:
-        womenOverTwentyYearsOld += 1
 
-averageBetweenAges /= 4
-print(f'A media da idade do grupo é de {averageBetweenAges:.2f} anos')
-print(f'O homem mais velho tem {olderAgeAmongMen} anos e o nome dele é {nameOfTheOldestMan}')
-print(f'E ao todo, são {womenOverTwentyYearsOld} mulheres com menos de 20 anos')
+    average_between_ages += age_of_person
+
+    if 'm' in gender_of_person and (iterator == 1 or age_of_person > older_age_among_men):
+        older_age_among_men = age_of_person
+        name_of_the_oldest_man = name_of_person
+
+    if 'f' in gender_of_person and age_of_person > 20:
+        women_over_twenty_years_old += 1
+
+average_between_ages /= 4
+print(f'A media da idade do grupo é de {average_between_ages:.2f} anos')
+print(
+    f'O homem mais velho tem {older_age_among_men} anos e o nome dele é {name_of_the_oldest_man}')
+print(
+    f'E ao todo, são {women_over_twenty_years_old} mulheres com menos de 20 anos')
