@@ -1,22 +1,26 @@
 from random import randint
 
 
-vitóriasConsecutivas = 0
+consecutive_wins = 0
 while True:
-    númeroEscolhido = randint(0, 10)
-    escolhaDoUsuário = 0
-    
-    while escolhaDoUsuário != 1 and escolhaDoUsuário != 2:
-        escolhaDoUsuário = int(input('Vamos jogar par ou impar!\nDigite 1 para se escolhe impar ou 2 se escolhe par: '))
-    
-    númeroDigitado = int(input('Agora escolha um número: '))
-    númeroFinal = númeroEscolhido + númeroDigitado
-    
-    print(f'O computador escolheu {númeroEscolhido} e você escolheu {númeroDigitado}, logo, ', end='')
-    if escolhaDoUsuário == 2 and númeroFinal % 2 == 0 or escolhaDoUsuário == 1 and númeroFinal % 2 != 0:
+    chosen_number = randint(0, 10)
+    user_choice = 0
+
+    while user_choice != 1 and user_choice != 2:
+        print('Vamos jogar par ou impar!')
+        user_choice = int(
+            input('Digite 1 para se escolhe impar ou 2 se escolhe par: '))
+
+    typed_number = int(input('Agora escolha um número: '))
+    result = chosen_number + typed_number
+
+    print(
+        f'O computador escolheu {chosen_number} e você escolheu {typed_number}, logo, ', end='')
+    if user_choice == 2 and result % 2 == 0 or user_choice == 1 and result % 2 != 0:
         print('você \033[32mVENCEU!\033[m')
-        vitóriasConsecutivas += 1
+        consecutive_wins += 1
     else:
         print('você \033[31mPERDEU!\033[m')
         break
-print(f'Game Over!\nVocê teve {vitóriasConsecutivas} vitórias consecutivas')
+
+print(f'Game Over!\nVocê teve {consecutive_wins} vitórias consecutivas')

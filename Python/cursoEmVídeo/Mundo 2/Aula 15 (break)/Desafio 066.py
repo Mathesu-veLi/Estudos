@@ -1,8 +1,9 @@
-soma = contador = 0
+typed_numbers = []
+
 while True:
-    n = int(input('Digite um número (999 para parar): '))
-    if n == 999:
+    number = int(input('Digite um número (999 para parar): '))
+    if number == 999:
         break
-    soma += n
-    contador += 1
-print(f'A soma entre os {contador} números digitados foi {soma}')
+    typed_numbers.append(number)
+
+print(f'A soma entre os {len(typed_numbers)} números digitados foi {sum(typed_numbers)}')

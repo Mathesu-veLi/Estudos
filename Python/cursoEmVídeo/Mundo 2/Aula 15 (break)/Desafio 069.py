@@ -1,24 +1,37 @@
-ordem = 1
-mulheresAbaixoDe20Anos = pessoasComMaisDe18Anos = homensCadastrados = pessoasCastradas = 0
-while True:    
-    idade = int(input(f'Digite a idade da {ordem}° pessoa: '))
-    ordem += 1
-    sexo = ' '
-    while sexo not in 'MF':
-        sexo = str(input('Digite agora o sexo dela [M/F]: ')).upper()
-    if idade < 20 and sexo == 'F':
-        mulheresAbaixoDe20Anos += 1
-    if sexo == 'M':
-        homensCadastrados += 1
-    if idade >= 18:
-        pessoasComMaisDe18Anos += 1
-    pessoasCastradas += 1
-    continuar = ' '
-    while continuar not in 'sn':
-        continuar = str(input('Deseja cadastrar mais alguma pessoa? [S/N]: ')).lower()
-    if 'n' in continuar:
+order = 1
+women_under_twenty = people_over_eighteen = registered_men = registered_people = 0
+
+while True:
+    age = int(input(f'Digite a idade da {order}° pessoa: '))
+    order += 1
+
+    while True:
+        gender = str(input('Digite agora o sexo dela [M/F]: ')).upper()
+        if gender in 'mf':
+            break
+        print('Digite M para masculino e F para feminino!')
+
+    if age < 20 and gender == 'F':
+        women_under_twenty += 1
+
+    if gender == 'M':
+        registered_men += 1
+
+    if age >= 18:
+        people_over_eighteen += 1
+
+    registered_people += 1
+
+    while True:
+        to_continue = str(
+            input('Deseja cadastrar mais alguma pessoa? [S/N]: ')).lower()
+        if to_continue in 'ns':
+            break
+        print('Digite S se deseja cadastrar mais alguém ou N caso não')
+    if 'n' in to_continue:
         break
-print(f'''Foram cadastradas {pessoasCastradas} pessoas
-      {pessoasComMaisDe18Anos} tem mais de 18 anos
-      {mulheresAbaixoDe20Anos} são mulheres abaixo dos 20 anos
-      {homensCadastrados} são homens''')
+
+print(f'''Foram cadastradas {registered_people} pessoas
+      {people_over_eighteen} tem mais de 18 anos
+      {women_under_twenty} são mulheres abaixo dos 20 anos
+      {registered_men} são homens''')

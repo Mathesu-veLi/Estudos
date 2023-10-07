@@ -1,7 +1,10 @@
 while True:
-    números = int(input('Quer ver a tabuada de que valor? (0 para parar): '))
-    if números <= 0:
+    numbers = int(input('Quer ver a tabuada de que valor? (0 para parar): '))
+    
+    if numbers <= 0:
         break
-    for c in range(1, 11):
-        print(f'{números} . {c} = {números * c}')
+    
+    for multiplier in range(1, 11):
+        print(f'{numbers} . {multiplier} = {numbers * multiplier}')
+
 print('Programa finalizado')
