@@ -10,7 +10,7 @@ for iterator in range(1, 5):
     while True:
         gender_of_person = str(input('Gênero [M/F]: ')).lower().strip()
 
-        if 'm' in gender_of_person or 'f' in gender_of_person:
+        if gender_of_person in 'mf':
             break
         print('Digite M para o gênero masculino e F para o gênero feminino')
 

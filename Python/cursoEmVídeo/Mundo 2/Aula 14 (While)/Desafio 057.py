@@ -1,6 +1,6 @@
 while True:
     gender = str(input('Informe seu sexo [M/F]: ')).strip().lower()[0]
-    if 'm' in gender or 'f' in gender:
+    if gender in 'mf':
         print(f'Sexo {gender} registrado com sucesso')
         break
     gender = str(

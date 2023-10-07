@@ -1,4 +1,3 @@
-continuation_confirmation = 's'
 average_of_numbers = 0
 typed_numbers = []
 
@@ -8,11 +7,11 @@ while True:
     typed_numbers.append(number)
     
     while True:
-        continuation_confirmation = str(input('Quer continuar? [S/N]: ')).lower().strip()
-        if 's' in continuation_confirmation or 'n' in continuation_confirmation:
+        to_continue = str(input('Quer continuar? [S/N]: ')).lower().strip()
+        if to_continue in 'ns':
             break
     
-    if 'n' in continuation_confirmation:
+    if 'n' in to_continue:
         break
 
 average_of_numbers /= len(typed_numbers)
