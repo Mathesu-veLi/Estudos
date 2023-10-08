@@ -1,6 +1,7 @@
-palavras = ('galo', 'pássaro', 'azul', 'code')
-for c in palavras:
-    print(f'\nNa palavra {c.upper()} temos', end=' ')
-    for letra in c:
-        if letra.lower() in 'aeiou':
-            print(letra, end=' ')
+words = ('galo', 'pássaro', 'azul', 'code')
+
+for word in words:
+    print(f'\nNa palavra {word.upper()} temos', end=' ')
+    for letter in word:
+        if letter.lower() in 'aeiou':
+            print(letter, end=' ')

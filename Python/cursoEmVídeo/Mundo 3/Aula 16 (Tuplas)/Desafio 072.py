@@ -1,6 +1,10 @@
-números = 'zero', 'um', 'dois', 'trés', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte'
+numbers = 'zero', 'um', 'dois', 'trés', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte'
+
 while True:
-    número = int(input('Digite um número de 0 a 20 para ver ele em extenso: '))
-    if número > 20:
-        print('Tente novamente. ', end='')
-    print(f'{número} em extenso é {números[número]}')
+    chosen_number = int(input('Digite um número de 0 a 20 para ver ele em extenso [999 para parar]: '))
+    if chosen_number <= 20 and chosen_number >= 0:
+        break
+    print('Tente novamente. ', end='')
+    
+print(f'{chosen_number} em extenso é {numbers[chosen_number]}')
+    
