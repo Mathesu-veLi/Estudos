@@ -1,14 +1,16 @@
-valores = list()
-for c in range(0,5):
-    valor = int(input('Digite um valor: '))
-    if c == 0 or valor > valores[-1]:
-        valores.append(valor)
+values = list()
+
+for iterator in range(0,5):
+    value = int(input('Digite um valor: '))
+    if iterator == 0 or value > values[-1]:
+        values.append(value)
     else:
-        posição = 0
-        while posição < len(valores):
-            if valor <= valores[posição]:
-                valores.insert(posição, valor)
+        position = 0
+        while position < len(values):
+            if value <= values[position]:
+                values.insert(position, value)
                 break
-            posição += 1
-print(f'Os valores digitados e ordem foram {valores}')
+            position += 1
+
+print(f'Os valores digitados e ordem foram {values}')
     

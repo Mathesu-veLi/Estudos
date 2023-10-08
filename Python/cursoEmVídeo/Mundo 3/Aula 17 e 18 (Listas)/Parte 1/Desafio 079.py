@@ -1,15 +1,19 @@
-valores = []
+values = []
+
 while True:
-    valor = int(input('Digite um número: '))
-    if valor in valores:
+    value = int(input('Digite um número: '))
+    if value in values:
         print('Digite um número que não tenha digitado antes')
-        continue
     else:
-        valores.append(valor)
-    continuar = input('Deseja continuar? [S/N]: ').lower()
-    while continuar not in 'sn':
-        continuar = str(input('Dados inválidos. Por favor digite S para continuar e N para parar: '))
-    if continuar in 'n': 
-        break
-valores.sort()
-print(f'Os valores únicos digitados foram: {valores}')
+        values.append(value)
+    
+        to_continue = str(input('Deseja continuar? [S/N]: ').lower())
+        while to_continue not in 'sn':
+            to_continue = str(
+                input('Dados inválidos. Por favor digite S para continuar e N para parar: '))
+    
+        if to_continue in 'n':
+            break
+
+values.sort()
+print(f'Os valores únicos digitados foram: {values}')

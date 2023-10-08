@@ -1,16 +1,20 @@
-números = []
+numbers = []
 while True:
-    números.append(int(input('Digite um número: ')))
-    continuar = str(input('Deseja continuar? [S/N]: ')).lower()
-    while continuar not in 'sn':
-        continuar = str(input('Dados inválidos. Por favor digite S para continuar e N para parar: '))
-    if 'n' in continuar:
+    numbers.append(int(input('Digite um número: ')))
+    to_continue = str(input('Deseja continuar? [S/N]: ')).lower()
+    while to_continue not in 'sn':
+        to_continue = str(
+            input('Dados inválidos. Por favor digite S para continuar e N para parar: '))
+    if 'n' in to_continue:
         break
-númerosPares = []
-númerosImpares = []
-for c in números:
-    if c % 2 == 0:
-        númerosPares.append(c)
+
+even_numbers = []
+odd_numbers = []
+for number in numbers:
+    if number % 2 == 0:
+        even_numbers.append(number)
     else:
-        númerosImpares.append(c)
-print(f'Os números digitados foram:\n{números}\nOs números pares digitados foram:\n{númerosPares}\nE os impares foram:\n{númerosImpares}')
+        odd_numbers.append(number)
+print(f'Os números digitados foram: {numbers}')
+print(f'Os números pares digitados foram: {even_numbers}')
+print(f'E os impares foram: {odd_numbers}')

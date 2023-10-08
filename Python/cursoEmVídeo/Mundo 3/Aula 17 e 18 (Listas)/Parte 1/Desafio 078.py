@@ -1,5 +1,7 @@
-valores = list()
-for v in range(0, 5):
-    valores.append(int(input('Digite um valor: ')))
-print(f'Os valores digitados foram:\n{valores}')
-print(f'O maior valor digitado foi {max(valores)} na {valores.index(max(valores))}° posição e o menor foi {min(valores)} na {valores.index(min(valores))}° posição')
+values = list()
+
+for value in range(0, 5):
+    values.append(int(input('Digite um valor: ')))
+
+print(f'Os valores digitados foram:\n{values}')
+print(f'O maior valor digitado foi {max(values)} na {values.index(max(values))}° posição e o menor foi {min(values)} na {values.index(min(values))}° posição')
