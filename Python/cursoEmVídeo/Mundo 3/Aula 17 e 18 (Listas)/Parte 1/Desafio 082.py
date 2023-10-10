@@ -4,7 +4,7 @@ while True:
     to_continue = str(input('Deseja continuar? [S/N]: ')).lower()
     while to_continue not in 'sn':
         to_continue = str(
-            input('Dados inválidos. Por favor digite S para continuar e N para parar: '))
+            input('Dados inválidos. Por favor digite S para continuar e N para parar: ')).lower()
     if 'n' in to_continue:
         break
 

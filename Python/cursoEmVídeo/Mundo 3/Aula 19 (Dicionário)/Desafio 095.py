@@ -1,37 +1,48 @@
-jogadoresCadastrados = []
+registred_footballers = []
+
 while True:
-    jogador = {'nomeDoJogador': input('Nome do jogador: '),
-            'partidasJogadas': int(input('Partidas jogadas: ')),
-            'gols': []}
-    for c in range(1, jogador['partidasJogadas'] + 1):
-        jogador['gols'].append(int(input(f'Quantidade de gols feitos na partida {c}: ')))
-    jogador['totalDeGols'] = sum(jogador['gols'])
-    jogadoresCadastrados.append(jogador.copy())
-    jogador.clear()
+    footballer = {'name': str(input('Nome do jogador: ')),
+                  'matches played': int(input('Partidas jogadas: ')),
+                  'goals': []}
+
+    for iterator in range(1, footballer['matches played'] + 1):
+        footballer['goals'].append(
+            int(input(f'Quantidade de gols feitos na partida {iterator}: ')))
+    footballer['total_goals'] = sum(footballer['goals'])
+
+    registred_footballers.append(footballer.copy())
+    footballer.clear()
+
     while True:
-        cont = input('Deseja continuar? [S/N]: ')
-        if cont in 'SsNn':
+        to_continue = str(input('Deseja continuar? [S/N]: ')).lower()
+        if to_continue in 'sn':
             break
         else:
             print('Digite "S" para continuar e "N" para parar')
-    if cont in 'Nn':
-        break
-print(f'\n{"cod":<4}{"nome":<10}{"gols":>8}{"total":>17}')
 
-for n, a in enumerate(jogadoresCadastrados):
-    print(f'{n:<4}{a["nomeDoJogador"]:<14}{str(a["gols"]):<16}{str(a["totalDeGols"]):<3}')
+    if to_continue in 'n':
+        break
+
+print(f'\n{"cod": <4}{"nome": <10}{"gols": >8}{"total": >17}')
+
+for iterator, footballer in enumerate(registred_footballers):
+    print(f'{iterator: <4}{footballer["name"]: <14}{str(footballer["goals"]): <16}{str(footballer["total_goals"]): <3}')
+
 print('-' * 39)
 while True:
-    while True:    
-        códigoDoJogador = int(input('Digite o código do jogador para ver os detalhes de seu aprimoramento (999 para parar): '))
-        if códigoDoJogador > len(jogadoresCadastrados) and códigoDoJogador != 999:
-            print('ERRO! O código digitado não existe, tente novamente!')
-        else:
-            if códigoDoJogador == 999:
-                break
-            for k, v in jogadoresCadastrados[códigoDoJogador].items():
-                if k == 'nomeDoJogador':
-                    print('Detalhes de aprimoramento do jogador ', v, ':')
-                if k == 'gols':
-                    for a, j in enumerate(v):
-                        print(f'    No jogo {a} fez {j} gols')    
+    footballer_code = int(input(
+        'Digite o código do jogador para ver os detalhes de seu aprimoramento (999 para parar): '))
+
+    if (footballer_code > len(registred_footballers)) and footballer_code != 999:
+        print('ERRO! O código digitado não existe, tente novamente!')
+    else:
+        if footballer_code == 999:
+            break
+
+        for key, value in registred_footballers[footballer_code].items():
+            if key == 'name':
+                print('Detalhes de aprimoramento do jogador ', value, ':')
+
+            if key == 'goals':
+                for iterator, goal_amount in enumerate(value):
+                    print(f'    No jogo {iterator} fez {goal_amount} gols')

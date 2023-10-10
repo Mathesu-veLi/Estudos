@@ -1,19 +1,20 @@
-jogador = {'nomeDoJogador': input('Nome do jogador: '),
-           'partidasJogadas': int(input('Partidas jogadas: ')),
-           'gols': [],}
+player = {'name': input('Nome do jogador: '),
+          'matches played': int(input('Partidas jogadas: ')),
+          'goals': [], }
 
 
-for c in range(1, jogador['partidas jogadas'] + 1):
-    jogador['gols'].append(int(input(f'Quantidade de gols feitos na partida {c}: ')))
-    
-jogador['totalDeGols'] = sum(jogador['gols'])
+for match_number in range(1, player['partidas jogadas'] + 1):
+    player['goals'].append(
+        int(input(f'Quantidade de gols feitos na partida {match_number}: ')))
 
-for k, v in jogador.items():
-    print(f'{k.capitalize()} = {v}')
-    
-print(f'O jogador {jogador["nomeDoJogador"]} jogou {jogador["partidasJogadas"]} partidas')
+player['total goals'] = sum(player['goals'])
 
-for i, a in enumerate(jogador['gols']):
-    print(f'    Na {i} partida, o jogador fez {a} gols')
+for key, value in player.items():
+    print(f'{key.capitalize()} = {value}')
 
-print(f'No total, {jogador["nomeDoJogador"]} fez {jogador["totalDeGols"]}')
+print(f'O jogador {player["name"]} jogou {player["matches played"]} partidas')
+
+for match_number, match_goals in enumerate(player['goals']):
+    print(f'Na {match_number} partida, o jogador fez {match_goals} gols')
+
+print(f'No total, {player["name"]} fez {player["total goals"]}')
