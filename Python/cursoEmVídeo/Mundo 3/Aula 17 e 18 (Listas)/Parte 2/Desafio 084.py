@@ -1,30 +1,37 @@
-pessoasCadastradas = []
-dadosDaPessoa = []
-maiorPeso = menorPeso = 0
+registered_persons = []
+person_data = []
+highest_weight = lowest_weight = 0
+
 while True:
-    dadosDaPessoa.append(input('Nome: '))
-    dadosDaPessoa.append(float(input('Peso: ')))
-    if len(pessoasCadastradas) == 0:
-        maiorPeso = dadosDaPessoa[1]
-        menorPeso = dadosDaPessoa[1]
+    person_data.append(input('Nome: '))
+    person_data.append(float(input('Peso: ')))
+
+    if len(registered_persons) == 0:
+        highest_weight = person_data[1]
+        lowest_weight = person_data[1]
     else:
-        if dadosDaPessoa[1] > maiorPeso:
-            maiorPeso = dadosDaPessoa[1]
-        if dadosDaPessoa [1] < menorPeso:
-            menorPeso = dadosDaPessoa[1]
-    pessoasCadastradas.append(dadosDaPessoa[:])
-    dadosDaPessoa.clear()
-    continuar = str(input('Deseja continuar? [S/N]: ')).lower()
-    while continuar not in 'sn':
-        continuar = str(input('Dados inválidos. Por favor digite S para continuar e N para parar: '))
-    if 'n' in continuar:
+        if person_data[1] > highest_weight:
+            highest_weight = person_data[1]
+        if person_data[1] < lowest_weight:
+            lowest_weight = person_data[1]
+
+    registered_persons.append(person_data[:])
+    person_data.clear()
+
+    to_continue = str(input('Deseja continuar? [S/N]: ')).lower()
+    while to_continue not in 'sn':
+        to_continue = str(
+            input('Dados inválidos. Por favor digite S para continuar e N para parar: '))
+    if 'n' in to_continue:
         break
-print(f'Foram cadastradas {len(pessoasCadastradas)} pessoas')
-print(f'O maiorPeso peso digitado foi {maiorPeso}Kg de', end=' ')
-for p in pessoasCadastradas:
-    if p[1] == maiorPeso:
+
+print(f'Foram cadastradas {len(registered_persons)} pessoas')
+print(f'O maiorPeso peso digitado foi {highest_weight}Kg de', end=' ')
+for p in registered_persons:
+    if p[1] == highest_weight:
         print(f'{p[0]}', end=' ')
-print(f'\nO menorPeso peso digitado foi {menorPeso}Kg de', end=' ')
-for a in pessoasCadastradas:
-    if a[1] == menorPeso:
+
+print(f'\nO menorPeso peso digitado foi {lowest_weight}Kg de', end=' ')
+for a in registered_persons:
+    if a[1] == lowest_weight:
         print(f'{a[0]}', end=' ')

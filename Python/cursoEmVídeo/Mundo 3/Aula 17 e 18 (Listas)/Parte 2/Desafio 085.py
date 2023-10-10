@@ -1,10 +1,14 @@
-valores = [[], []]
-for c in range(0, 7):
-    valor = int(input('Digite um número: '))
-    if valor % 2 == 0:
-        valores[0].append(valor)
+values = [[], []]
+
+for iterator in range(0, 7):
+    value = int(input('Digite um número: '))
+    if value % 2 == 0:
+        values[0].append(value)
     else:
-        valores[1].append(valor)
-valores[0].sort()
-valores[1].sort()
-print(f'Os valores pares digitados foram: {valores[0]}\nOs valores impares digitados foram: {valores[1]}')
+        values[1].append(value)
+        
+values[0].sort()
+values[1].sort()
+
+print(f'Os valores pares digitados foram: {values[0]}')
+print(f'Os valores impares digitados foram: {values[1]}')

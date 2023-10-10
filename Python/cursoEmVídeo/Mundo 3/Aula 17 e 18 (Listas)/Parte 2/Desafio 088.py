@@ -2,18 +2,21 @@ from random import randint
 from time import sleep
 
 
-conjuntoDeNúmero = []
-jogos = []
-quantidadeDeJogos = int(input('Quantos jogos você quer que eu sorteie? '))
-for c in range(quantidadeDeJogos):
-    for c in range(6):
-        númeroAleatório = randint(1, 60)
-        if númeroAleatório not in conjuntoDeNúmero:
-            conjuntoDeNúmero.append(númeroAleatório)
-    conjuntoDeNúmero.sort()
-    jogos.append(conjuntoDeNúmero[:])
-    conjuntoDeNúmero.clear()
-for i, l in enumerate(jogos):
-    print(f'Jogo {i + 1}: {l}')
+number_set = []
+number_sets = []
+quantity_of_number_sets = int(input('Quantos jogos você quer que eu sorteie? '))
+
+for iterator in range(quantity_of_number_sets):
+    for second_iterator in range(6):
+        random_number = randint(1, 60)
+        if random_number not in number_set:
+            number_set.append(random_number)
+
+    number_set.sort()
+    number_sets.append(number_set[:])
+    number_set.clear()
+    
+for iterator, set in enumerate(number_sets):
+    print(f'Jogo {iterator + 1}: {set}')
     sleep(0.5)
 print(f'{"<" * 4} Boa sorte! {">" * 4}')
