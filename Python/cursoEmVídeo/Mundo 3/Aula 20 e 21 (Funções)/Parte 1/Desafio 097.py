@@ -1,8 +1,3 @@
-def escrevendoComEnfeite(mensagem):
-    tam = '~'*(len(mensagem)+4)
-    print(tam)
-    print(f'  {mensagem}  ')
-    print(tam)
-    
+from modules import Challenge097
 
-escrevendoComEnfeite('Olá mundo')
+Challenge097.write_with_decoration('Olá mundo')

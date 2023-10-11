@@ -1,8 +1,12 @@
-def calcularÁrea(largura, comprimento):
-    área = largura * comprimento
-    return área
+from modules import calculate_area
 
+while True:
+    try:
+        width = float(input('LARGURA (m): '))
+        height = float(input('COMPRIMENTO (m): '))
+        break
+    except ValueError:
+        print('Dígite somente números por favor')
 
-largura = float(input('LARGURA (m): '))
-comprimento = float(input('COMPRIMENTO (m): '))
-print(f'A área de um terreno {largura:.2f} x {comprimento:.2f} é de {calcularÁrea(largura, comprimento)}m²')
+print(f'A área de um terreno {width: .2f} x {height: .2f} é de {
+      calculate_area(width, height)}m²')

@@ -1,20 +1,8 @@
-from random import randint
+from modules import generate_random_numbers, add_up_the_even_numbers
 
-númerosSorteados = []
+random_numbers = []
 
-def sortearNúmeros():
-    for c in range(5):
-        númerosSorteados.append(randint(1, 100))
-
-def somarNúmerosPares():
-    pares = 0
-    for c in númerosSorteados:
-        if c % 2 == 0:
-            pares += c
-    return pares
-    
-
-
-sortearNúmeros()
-print(f'Os números sorteados foram {númerosSorteados}')
-print(f'A soma entre todos os números pares entre {númerosSorteados} tem o resultado de {somarNúmerosPares()}')
+generate_random_numbers(random_numbers)
+print(f'Os números sorteados foram {random_numbers}')
+print(f'A soma entre todos os números pares entre {
+      random_numbers} tem o resultado de {add_up_the_even_numbers(random_numbers)}')

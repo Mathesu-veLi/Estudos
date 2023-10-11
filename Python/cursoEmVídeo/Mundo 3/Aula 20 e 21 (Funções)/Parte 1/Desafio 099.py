@@ -1,5 +1,4 @@
-def maiorValor(* número):
-    print(f'O maior número entre os {len(número)} números {número} é {max(número)}')
+from modules import show_greater_value
 
 
-maiorValor(1,4,7,6)
+show_greater_value(1, 4, 7, 6)

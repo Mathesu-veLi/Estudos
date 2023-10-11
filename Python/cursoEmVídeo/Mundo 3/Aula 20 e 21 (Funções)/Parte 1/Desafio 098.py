@@ -1,33 +1,18 @@
-from time import sleep
+from modules import tell
 
-def contador(inicio, fim, passo):
-    print(f'Contagem de {inicio} até {fim} de {passo} em {passo}')
-    
-    contagem = inicio
-    
-    if passo < 0:
-        passo *= -1
-    if passo == 0:
-        passo = 1
 
-    if inicio < fim:    
-        while contagem <= fim:
-            print(f'{contagem}', end=' ')
-            contagem += passo
-            sleep(0.2)
-    else:
-        while contagem >= fim:
-            print(f'{contagem}', end=' ')
-            contagem -= passo
-            sleep(0.2)
-
-    print('Fim!')
-    
-
-contador(1, 10, 1)
-contador(10, 0, 2)
+tell(1, 10, 1)
+tell(10, 0, 2)
 print('Agora é sua vez de personalizar a contagem!')
-inicio = int(input('Inicio: '))
-fim = int(input('Fim: '))
-passo = int(input('Passo: '))
-contador(inicio, fim, passo)
+
+while True:
+    try:
+        start = int(input('Inicio: '))
+        end = int(input('Fim: '))
+        step = int(input('Passo: '))
+        break
+    except ValueError:
+        print('Dígite somente números por favor')
+
+tell(start, end, step)
+print('Fim!')
