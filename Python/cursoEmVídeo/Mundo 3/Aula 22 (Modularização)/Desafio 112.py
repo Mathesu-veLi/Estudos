@@ -1,4 +1,7 @@
-from utilidadesCeV import dado, moeda
+from CEVUtils import currency
+from CEVUtils.read_number import read_number
 
-preço = dado.lerNúmero('Digite o preço: \033[032mR$', 'Digite somente valores monetários por favor!')
-moeda.mostrarPreçoComAlterações(preço, 80, 30)
+
+price = read_number('Digite o preço: R$',
+                    'Digite somente valores monetários por favor!')
+currency.show_price_changes(price, 80, 30)

@@ -1,4 +1,4 @@
-from utilidadesCeV import moeda
+from CEVUtils import currency
 
-preço = float(input('Digite o preço: \033[032mR$'))
-moeda.mostrarPreçoComAlterações(preço, 80, 30)
+price = float(input('Digite o preço: R$'))
+currency.show_price_changes(price, 80, 30)

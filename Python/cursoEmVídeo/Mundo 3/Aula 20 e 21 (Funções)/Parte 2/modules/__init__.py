@@ -1,6 +1,29 @@
 from time import sleep
 
 
+def read_number(ask, error_mensage='Digite somente números por favor!', type=int):
+    """-> Allows input of numbers only
+
+    Args:
+        ask (str): Message that will appear in the input
+        error_mensage (str, optional): Error message that will appear if the value entered is not a number. Defaults to 'Digite somente números por favor!'.
+        type (str, optional): Type of number to be entered (int ou float)
+    """
+
+    while True:
+        number = str(input(ask)).strip()
+        try:
+            if type == int:
+                number = int(number)
+            elif type == float:
+                if ',' in number:
+                    number = number.replace(',', '.')
+                number = float(number)
+            return number
+        except ValueError:
+            print(error_mensage)
+
+
 def check_voting_obligation(age: int):
     """Check if voting is compulsory, optional or if it is not possible to vote
 
@@ -58,36 +81,13 @@ def player_sheet(name_of_footballer=0, number_of_goals=0):
           number_of_goals} gols no campeonato')
 
 
-def read_number(ask, error_mensage='Digite somente números por favor!', type=int):
-    """-> Allows input of numbers only
-
-    Args:
-        ask (str): Message that will appear in the input
-        error_mensage (str, optional): Error message that will appear if the value entered is not a number. Defaults to 'Digite somente números por favor!'.
-        type (str, optional): Type of number to be entered (int ou float)
-    """
-
-    while True:
-        number = str(input(ask)).strip()
-        try:
-            if type == int:
-                number = int(number)
-            elif type == float:
-                if ',' in number:
-                    number = number.replace(',', '.')
-                number = float(number)
-            return number
-        except ValueError:
-            print(error_mensage)
-
-
 def register_grades():
     """Records the student's grades
 
     Returns:
         dict: grade data
     """
-    
+
     registered_grades = {'Number of grades recorded': 0,
                          'Highest grade': 0, 'Lowest grade': 0, 'Average grade': 0}
 
