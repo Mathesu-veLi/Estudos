@@ -1,10 +1,9 @@
-def ficha(nomeDoJogador=0, númeroDeGols=0):
-    if nomeDoJogador == '':
-        nomeDoJogador = '<desconhecido>'
-    if númeroDeGols.isnumeric() == False:
-        númeroDeGols = 0
-    print(f'O jogador {nomeDoJogador} fez {númeroDeGols} gols no campeonato')
-        
-nomeDoJogador = str(input('Nome do jogador: '))
-númeroDeGols = str(input('Número de gols: '))
-ficha(nomeDoJogador, númeroDeGols)
+from modules import player_sheet
+
+
+footballer = {
+    'name': str(input('Nome do jogador: ')),
+    'number of goals': int(input('Número de gols: '))
+}
+
+player_sheet(footballer['name'], footballer['number of goals'])
