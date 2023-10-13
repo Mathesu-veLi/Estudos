@@ -1,5 +1,8 @@
-from modularização import lerNúmero
+from modules import read_number
 
-númeroInteiro = lerNúmero('Digite um número inteiro: ', '\033[31mERRO: digite um número inteiro valido!\033[m')
-númeroDecimal = lerNúmero('Digite um número real (decimal): ', '\033[31mERRO: digite um número real (decimal) valido!\033[m', float)
-print(f'O valor inteiro digitado foi {númeroInteiro} e o valor real digitado foi {númeroDecimal}')
+integer_number = read_number(
+    'Digite um número inteiro: ', 'ERRO: digite um número inteiro valido!')
+floating_number = read_number('Digite um número real (decimal): ',
+                              'ERRO: digite um número real (decimal) valido!', float)
+print(f'O valor inteiro digitado foi {
+      integer_number} e o valor real digitado foi {floating_number}')

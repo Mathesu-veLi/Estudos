@@ -1,7 +1,7 @@
 from time import sleep
 
 
-def read_number(ask, error_mensage='Digite somente números por favor!', type=int):
+def check_if_is_number(ask, error_mensage='Digite somente números por favor!', type=int):
     """-> Allows input of numbers only
 
     Args:
@@ -93,7 +93,7 @@ def register_grades():
 
     grades = []
     while True:
-        grade = read_number('Digite a nota do aluno [999 para parar]: ')
+        grade = check_if_is_number('Digite a nota do aluno [999 para parar]: ')
         if grade == 999:
             break
         grades.append(grade)

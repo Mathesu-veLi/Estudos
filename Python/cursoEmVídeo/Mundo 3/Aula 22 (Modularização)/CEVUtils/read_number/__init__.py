@@ -1,4 +1,4 @@
-def read_number(ask, error_mensage='Digite somente números por favor!', type=int):
+def check_if_is_number(ask, error_mensage='Digite somente números por favor!', type=int):
     """-> Allows input of numbers only
 
     Args:
