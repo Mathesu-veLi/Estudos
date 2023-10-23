@@ -22,7 +22,7 @@ a209.721.825-35
 875.370.505-03
 
 401.302.655.43
-`
+`;
 
 const ips = `
 Os IPs são:
@@ -35,9 +35,10 @@ Os IPs são:
 
 300.255.255.300
 
-`
+`;
 
-const alfabeto = 'ABCDEFGHIJKLMNPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789'
+const alfabeto =
+  'ABCDEFGHIJKLMNPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789';
 
 const html = '<p>Olá mundo</p> <p>Olá de novo</p>';
 const html2 = `<p
@@ -45,6 +46,13 @@ class="teste teste"
 data-teste='teste'>
   Olá mundo
 </p> <p>Olá mundo</p> <div>Sou a div</div>`;
+
+const lookahead = `ONLINE 192.168.0.1 ABCDEF inactive
+OFFLINE 192.168.0.2 ABCDEF active
+ONLINE 192.168.0.3 ABCDEF active
+ONLINE 192.168.0.4 ABCDEF active
+OFFLINE 192.168.0.5 ABCDEF active
+OFFLINE 192.168.0.6 ABCDEF inactive`;
 
 module.exports = {
   texto,
@@ -54,4 +62,5 @@ module.exports = {
   alfabeto,
   cpfs,
   ips,
+  lookahead,
 };
