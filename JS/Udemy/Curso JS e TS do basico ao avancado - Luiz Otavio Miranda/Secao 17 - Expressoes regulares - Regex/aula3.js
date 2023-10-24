@@ -4,7 +4,7 @@
     + - 1 ou mais {1, } (obrigatório)
     ? - 0 ou 1 {0, 1} (opcional)
     \ Caractere de escape
-    {mínimo, máximo} ( 
+    {mínimo, máximo} (
       {10,} no mínimo 10
       {,10} de 0 a 10
     )
@@ -22,7 +22,7 @@ const regExp2 = /\.(jpe{0,}g)/gi;
 for (const arquivo of arquivos) {
   const válido = arquivo.match(regExp2);
 
-  if(!válido) continue;
+  if (!válido) continue;
 
   console.log('');
   console.log(arquivo, arquivo.match(regExp2));
