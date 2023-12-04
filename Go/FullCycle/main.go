@@ -1,33 +1,32 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 )
 
-type Couse struct {
+type Course struct {
 	Name        string
 	Description string
 	Price       int
 }
 
-func (c Couse) getFullInfo() string {
+func (c Course) getFullInfo() string {
 	return fmt.Sprintf("Name: %s, Description: %s, Price: %d", c.Name, c.Description, c.Price)
 }
 
 func main() {
-	couse := Couse{
-		Name:        "Golang",
-		Description: "Golang Couse",
-		Price:       100,
-	}
-
-	fmt.Println(couse.getFullInfo())
-
 	http.HandleFunc("/", home)
 	http.ListenAndServe(":8080", nil)
 }
 
-func home(w http.ResponseWriter, r *http.Request) {
-	w.Write([]byte("Hello World"))
+func home(res http.ResponseWriter, req *http.Request) {
+	course := Course{
+		Name:        "Golang",
+		Description: "Golang Course",
+		Price:       100,
+	}
+	
+	json.NewEncoder(res).Encode(course)
 }
