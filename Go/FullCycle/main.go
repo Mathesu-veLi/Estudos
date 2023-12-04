@@ -11,7 +11,7 @@ type Couse struct {
 	Price       int
 }
 
-func (c Couse) GetFullInfo() string {
+func (c Couse) getFullInfo() string {
 	return fmt.Sprintf("Name: %s, Description: %s, Price: %d", c.Name, c.Description, c.Price)
 }
 
@@ -22,7 +22,7 @@ func main() {
 		Price:       100,
 	}
 
-	fmt.Println(couse.GetFullInfo())
+	fmt.Println(couse.getFullInfo())
 
 	http.HandleFunc("/", home)
 	http.ListenAndServe(":8080", nil)
