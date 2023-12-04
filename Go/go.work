@@ -3,4 +3,5 @@ go 1.21.4
 use (
 	"./Roadmap.sh/Learn the Basics/Basic Sintax"
 	"./Roadmap.sh/Learn the Basics/Variables in Go"
+	"./FullCycle"
 )
