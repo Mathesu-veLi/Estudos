@@ -1,6 +1,9 @@
 package main
 
 func main() {
-	a := "Hello, world"
-	println(a)
+	println(sum(1, 2))
+}
+
+func sum(x int, y int) int {
+	return x + y
 }
