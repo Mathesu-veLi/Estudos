@@ -1,9 +1,14 @@
 package main
 
 func main() {
-	println(sum(1, 2))
+	resultado, status := sum(10, 20)
+	println(resultado, status)
 }
 
-func sum(x int, y int) int {
-	return x + y
+func sum(x int, y int) (int, bool) {
+	if x > 10 {
+		return x + y, true
+	}
+
+	return x + y, false
 }
