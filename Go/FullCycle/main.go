@@ -11,12 +11,19 @@ type Couse struct {
 	Price       int
 }
 
+func (c Couse) GetFullInfo() string {
+	return fmt.Sprintf("Name: %s, Description: %s, Price: %d", c.Name, c.Description, c.Price)
+}
+
 func main() {
 	couse := Couse{
 		Name:        "Golang",
 		Description: "Golang Couse",
 		Price:       100,
 	}
+
+	fmt.Println(couse.GetFullInfo())
+
 	http.HandleFunc("/", home)
 	http.ListenAndServe(":8080", nil)
 }
