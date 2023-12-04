@@ -25,6 +25,8 @@ func counter() {
 }
 
 func main() {
+	go counter()
+	go counter()
 	counter()
 }
 
