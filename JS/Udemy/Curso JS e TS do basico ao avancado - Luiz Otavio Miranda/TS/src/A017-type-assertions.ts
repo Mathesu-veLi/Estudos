@@ -9,3 +9,8 @@ body2.style.background = 'red';
 // Type assertion
 const body3 = document.querySelector('body') as HTMLBodyElement;
 body3.style.background = 'red';
+
+// HTMLElement
+const input = document.querySelector('.input') as HTMLInputElement;
+input.value = 'Qualquer coisa';
+input.focus();
