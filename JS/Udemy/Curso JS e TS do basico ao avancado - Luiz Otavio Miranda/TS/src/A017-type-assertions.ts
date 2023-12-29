@@ -14,3 +14,5 @@ body3.style.background = 'red';
 const input = document.querySelector('.input') as HTMLInputElement;
 input.value = 'Qualquer coisa';
 input.focus();
+
+const body4 = (document.querySelector('body') as unknown) as number;
