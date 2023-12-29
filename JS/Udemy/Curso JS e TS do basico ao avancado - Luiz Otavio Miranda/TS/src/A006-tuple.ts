@@ -1,4 +1,4 @@
-const dadosCliente1: [number, string] = [1, 'Matheus'];
+const dadosCliente1: readonly [number, string] = [1, 'Matheus'];
 const dadosCliente2: [number, string, string?] = [1, 'Matheus', 'Silva'];
 const dadosCliente3: [number, string, ...string[]] = [1, 'Matheus', 'Levi', 'Fernandes', 'da Silva'];
 
