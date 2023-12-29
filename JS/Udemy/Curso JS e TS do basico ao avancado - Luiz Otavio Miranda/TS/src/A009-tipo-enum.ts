@@ -4,4 +4,4 @@ enum Cores {
     AZUL, // 2
 }
 
-console.log(Cores);
+console.log(Cores[0]);
