@@ -6,5 +6,5 @@ const verifyUser: VerifyUserFn = (user, receivedValue) => {
 };
 
 const dbUser = {username: 'joao', password: '123456'}
-const receivedUser = {username: 'joao', password: '123456'}
+const receivedUser = {username: 'joao', password: '123456', permissions: ''};
 const loggedIn = verifyUser(dbUser, receivedUser);
