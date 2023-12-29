@@ -1,5 +1,6 @@
 const dadosCliente1: [number, string] = [1, 'Matheus'];
 const dadosCliente2: [number, string, string?] = [1, 'Matheus', 'Silva'];
+const dadosCliente3: [number, string, ...string[]] = [1, 'Matheus', 'Levi', 'Fernandes', 'da Silva'];
 
 dadosCliente1[0] = 100;
 dadosCliente1[1] = 'Carlos';
