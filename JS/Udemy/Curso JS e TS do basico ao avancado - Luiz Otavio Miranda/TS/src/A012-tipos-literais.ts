@@ -6,4 +6,8 @@ const pessoa = {
     sobrenome: 'Silva'
 }
 
-console.log(x, a);
+function escolhaCor(cor: 'Vermelho' | 'Verde' | 'Azul') {
+    return cor;
+}
+
+console.log(escolhaCor);
