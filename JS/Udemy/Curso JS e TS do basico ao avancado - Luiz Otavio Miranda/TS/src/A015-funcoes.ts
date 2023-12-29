@@ -10,3 +10,9 @@ function mapStrings(array: string[], callbackfn: MapStringsCallback): string[] {
     return newArray;
 }
 
+const abc = ['a', 'b', 'c'];
+const abcMapped = mapStrings(abc, item => {
+    return item.toUpperCase();
+})
+
+
