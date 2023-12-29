@@ -14,3 +14,13 @@ export function createPerson(
         lastName,
     };
 }
+
+export function squareOf(x: any) {
+    if (typeof x !== 'number') return null
+    return x * x;
+}
+
+const squareOfTwoNumber = squareOf(2);
+const squareOfTwoString = squareOf('2');
+
+console.log(squareOfTwoNumber, squareOfTwoString)
