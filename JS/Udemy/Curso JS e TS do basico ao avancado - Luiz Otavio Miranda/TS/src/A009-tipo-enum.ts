@@ -1,7 +1,7 @@
 enum Cores {
-    VERMELHO, // 0
-    VERDE, // 1
-    AZUL, // 2
+    VERMELHO = 10, // 10
+    VERDE = 100, // 100
+    AZUL = 200, // 200
 }
 
-console.log(Cores[0]);
+console.log(Cores[10]);
