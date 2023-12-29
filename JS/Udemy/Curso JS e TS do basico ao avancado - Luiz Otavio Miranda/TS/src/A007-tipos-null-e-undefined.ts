@@ -4,7 +4,7 @@ console.log(x * 2);
 
 export function createPerson(
     firstName: string,
-    lastName?: string
+    lastName?: string,
 ): {
     firstName: string;
     lastName?: string;
@@ -16,11 +16,15 @@ export function createPerson(
 }
 
 export function squareOf(x: any) {
-    if (typeof x !== 'number') return null
+    if (typeof x !== 'number') return null;
     return x * x;
 }
 
 const squareOfTwoNumber = squareOf(2);
 const squareOfTwoString = squareOf('2');
 
-console.log(squareOfTwoNumber, squareOfTwoString)
+if (typeof squareOfTwoNumber !== 'number') {
+    throw TypeError('Value must be a number');
+}
+
+console.log(squareOfTwoNumber * 100);
