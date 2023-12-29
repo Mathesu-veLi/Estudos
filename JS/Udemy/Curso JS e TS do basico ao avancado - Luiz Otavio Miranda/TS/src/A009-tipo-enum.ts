@@ -10,5 +10,6 @@ enum Cores {
     ROSA,
 }
 
-console.log(Cores[10]);
-console.log(Cores.ROSA)
+function escolhaACor(cor: Cores): void {
+    console.log(Cores[cor]);
+}
