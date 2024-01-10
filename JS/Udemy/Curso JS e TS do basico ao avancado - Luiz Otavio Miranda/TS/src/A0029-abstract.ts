@@ -1,4 +1,6 @@
 export abstract class Personagem {
+    protected abstract emoji: string;
+
     constructor(
         protected nome: string,
         protected ataque: number,
@@ -12,18 +14,22 @@ export abstract class Personagem {
 
     perderVida(forcaAtaque: number): void {
         this.vida -= forcaAtaque;
-        console.log(`${this.nome} agora tem ${this.vida}`);
+        console.log(`${this.emoji} - ${this.nome} agora tem ${this.vida}`);
     }
 
     abstract bordao(): void;
 }
 
 export class Guerreiro extends Personagem {
+    protected emoji = '\u{1F9DD}';
+
     bordao(): void {
         console.log('GUERREIRO atacando');
     }
 }
 export class Monstro extends Personagem {
+    protected emoji = '\u{1F9DF}';
+
     bordao(): void {
         console.log('MONSTRO atacando');
     }
