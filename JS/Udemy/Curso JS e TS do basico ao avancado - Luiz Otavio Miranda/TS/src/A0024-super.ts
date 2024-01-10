@@ -27,6 +27,16 @@ export class Cliente extends Pessoa {
     }
 }
 export class Aluno extends Pessoa {
+    constructor(
+        nome: string,
+        sobrenome: string,
+        idade: number,
+        cpf: string,
+        public sala: string,
+    ) {
+        super(nome, sobrenome, idade, cpf);
+    }
+
     getNomeCompleto(): string {
         return `Isso vem do aluno: ${this.nome} ${this.sobrenome}`;
     }
