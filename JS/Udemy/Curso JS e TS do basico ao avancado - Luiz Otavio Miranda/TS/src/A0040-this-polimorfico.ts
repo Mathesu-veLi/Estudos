@@ -19,6 +19,13 @@ export class Calculadora {
     }
 }
 
-const calculadora = new Calculadora(10);
-calculadora.add(5).mul(2);
+export class SubCalculadora extends Calculadora {
+    pow(n: number): this {
+        this.numero = Math.pow(this.numero, n);
+        return this;
+    }
+}
+
+const calculadora = new SubCalculadora(10);
+calculadora.add(5).mul(2).pow(2);
 console.log(calculadora);
