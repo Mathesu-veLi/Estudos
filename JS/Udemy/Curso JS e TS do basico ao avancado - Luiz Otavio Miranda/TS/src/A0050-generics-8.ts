@@ -25,3 +25,8 @@ const objeto2: PessoaProtocol = {
     idade: 13,
 };
 console.log(objeto2);
+
+type ABC = 'A' | 'B' | 'C';
+type CDE = 'C' | 'D' | 'E';
+type TipoExclude = Exclude<ABC, CDE>;
+type TipoExtract = Extract<ABC, CDE>;
