@@ -10,7 +10,9 @@ type TipoNomeCompleto = {
     nomeCompleto: () => string;
 };
 
-export class Pessoa implements TipoNome, TipoSobrenome, TipoNomeCompleto {
+type TipoPessoa = TipoNome & TipoSobrenome & TipoNomeCompleto;
+
+export class Pessoa implements TipoPessoa {
     constructor(
         public nome: string,
         public sobrenome: string,
