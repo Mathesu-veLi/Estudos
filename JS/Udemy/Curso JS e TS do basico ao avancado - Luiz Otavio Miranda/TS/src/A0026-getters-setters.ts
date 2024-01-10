@@ -7,7 +7,6 @@ export class Pessoa {
     ) {}
 
     set cpf(cpf: string) {
-        this.cpf = valor;
         this._cpf = cpf;
     }
 
