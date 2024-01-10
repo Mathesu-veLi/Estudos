@@ -22,7 +22,7 @@ export class Udemy extends Empresa {
         super('Udemy', '11.111.111/0001-11');
     }
 
-    popColaborador(): Colaborador {
+    popColaborador() {
         const colaborador = this.colaboradores.pop();
         if (colaborador) return colaborador;
         return null;
