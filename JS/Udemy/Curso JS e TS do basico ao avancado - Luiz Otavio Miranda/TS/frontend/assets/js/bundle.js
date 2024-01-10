@@ -20,13 +20,27 @@ class VideoPlayer {
         this.stopButton = videoPLayerElement.stopButton;
     }
     startEvents() {
-        throw new Error('Method not implemented.');
+        this.playButton.addEventListener('click', () => {
+            this.playToggle();
+        });
+        this.stopButton.addEventListener('click', () => {
+            this.stop();
+        });
     }
     playToggle() {
-        throw new Error('Method not implemented.');
+        if (this.videoPlayer.paused) {
+            this.videoPlayer.play();
+            this.playButton.innerHTML = 'Pause';
+        }
+        else {
+            this.videoPlayer.pause();
+            this.playButton.innerHTML = 'Play';
+        }
     }
     stop() {
-        throw new Error('Method not implemented.');
+        this.videoPlayer.pause();
+        this.videoPlayer.currentTime = 0;
+        this.playButton.innerHTML = 'Play';
     }
 }
 exports["default"] = VideoPlayer;

@@ -42,7 +42,9 @@ export default class VideoPlayer implements VideoPlayerProtocol {
     }
 
     stop(): void {
-        throw new Error('Method not implemented.');
+        this.videoPlayer.pause();
+        this.videoPlayer.currentTime = 0;
+        this.playButton.innerHTML = 'Play';
     }
 }
 
