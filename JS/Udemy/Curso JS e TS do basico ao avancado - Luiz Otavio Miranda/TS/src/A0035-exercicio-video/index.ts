@@ -22,11 +22,25 @@ export default class VideoPlayer implements VideoPlayerProtocol {
     }
 
     startEvents(): void {
-        throw new Error('Method not implemented.');
+        this.playButton.addEventListener('click', () => {
+            this.playToggle();
+        });
+
+        this.stopButton.addEventListener('click', () => {
+            this.stop();
+        });
     }
+
     playToggle(): void {
-        throw new Error('Method not implemented.');
+        if (this.videoPlayer.paused) {
+            this.videoPlayer.play();
+            this.playButton.innerHTML = 'Pause';
+        } else {
+            this.videoPlayer.pause();
+            this.playButton.innerHTML = 'Play';
+        }
     }
+
     stop(): void {
         throw new Error('Method not implemented.');
     }
