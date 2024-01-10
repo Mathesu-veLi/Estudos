@@ -1,16 +1,14 @@
-export abstract class TipoPessoa {
-    protected abstract nome: string;
-    protected abstract sobrenome: string;
-    protected abstract nomeCompleto(): string;
-}
+type TipoPessoa = {
+    nome: string;
+    sobrenome: string;
+    nomeCompleto(): string;
+};
 
-export class Pessoa extends TipoPessoa {
+export class Pessoa implements TipoPessoa {
     constructor(
-        protected nome: string,
-        protected sobrenome: string,
-    ) {
-        super();
-    }
+        public nome: string,
+        public sobrenome: string,
+    ) {}
 
     public nomeCompleto(): string {
         return `${this.nome} ${this.sobrenome}`;
