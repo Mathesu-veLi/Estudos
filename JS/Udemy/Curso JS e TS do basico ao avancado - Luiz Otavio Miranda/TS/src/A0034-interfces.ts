@@ -11,8 +11,9 @@ interface TipoNomeCompleto {
 }
 
 type TipoPessoa = TipoNome & TipoSobrenome & TipoNomeCompleto;
+interface TipoPessoa2 extends TipoNome, TipoSobrenome, TipoNomeCompleto {}
 
-export class Pessoa implements TipoPessoa {
+export class Pessoa implements TipoPessoa2 {
     constructor(
         public nome: string,
         public sobrenome: string,
