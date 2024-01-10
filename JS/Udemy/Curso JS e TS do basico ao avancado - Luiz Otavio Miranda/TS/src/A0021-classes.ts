@@ -11,6 +11,10 @@ export class Empresa {
     public adicionaColaborador(colaborador: Colaborador): void {
         this.colaboradores.push(colaborador);
     }
+
+    public mostrarColaboradores(): void {
+        this.colaboradores.forEach((colaborador) => console.log(colaborador));
+    }
 }
 
 export class Colaborador {
