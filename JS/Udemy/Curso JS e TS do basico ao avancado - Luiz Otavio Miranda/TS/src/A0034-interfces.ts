@@ -1,14 +1,14 @@
-type TipoNome = {
+interface TipoNome {
     nome: string;
-};
+}
 
-type TipoSobrenome = {
+interface TipoSobrenome {
     sobrenome: string;
-};
+}
 
-type TipoNomeCompleto = {
-    nomeCompleto: () => string;
-};
+interface TipoNomeCompleto {
+    nomeCompleto(): string;
+}
 
 type TipoPessoa = TipoNome & TipoSobrenome & TipoNomeCompleto;
 
