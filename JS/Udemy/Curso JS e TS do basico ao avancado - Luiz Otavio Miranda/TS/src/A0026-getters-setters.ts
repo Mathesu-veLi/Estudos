@@ -3,18 +3,19 @@ export class Pessoa {
         private nome: string,
         private sobrenome: string,
         private idade: number,
-        private cpf: string,
+        private _cpf: string,
     ) {}
 
-    setCpf(valor: string): void {
+    set cpf(cpf: string) {
         this.cpf = valor;
+        this._cpf = cpf;
     }
 
-    getCpf(): string {
-        return this.cpf.replace(/\D/g, '');
+    get cpf(): string {
+        return this._cpf.replace(/\D/g, '');
     }
 }
 
 const pessoa = new Pessoa('Luiz', 'Miranda', 30, '000.000.0000-00');
-pessoa.setCpf('111.111.111-11');
-console.log(pessoa.getCpf());
+pessoa.cpf = '123.456.789.99';
+console.log(pessoa.cpf);
