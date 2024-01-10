@@ -50,5 +50,5 @@ const escritor = new Escritor('Matheus');
 const caneta = new Caneta('Bic');
 const maquinaEscrever = new MaquinaEscrever('Máquina');
 
-
-console.log(escritor, caneta, maquinaEscrever);
+escritor.ferramenta = caneta;
+escritor.escrever();
