@@ -21,7 +21,9 @@ export class Pessoa {
 
 export class Cliente extends Pessoa {
     getNomeCompleto(): string {
-        return `Isso vem do cliente: ${this.nome} ${this.sobrenome}`;
+        console.log('Fazendo algo antes');
+        const result = super.getNomeCompleto();
+        return result + '';
     }
 }
 export class Aluno extends Pessoa {
