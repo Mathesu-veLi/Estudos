@@ -1,4 +1,5 @@
 type CoresObj = typeof coresObj;
+type CoresChaves = keyof CoresObj;
 
 const coresObj = {
     vermelho: 'red',
@@ -6,7 +7,7 @@ const coresObj = {
     azul: 'blue',
 };
 
-function traduzirCor(cor: 'vermelho' | 'verde' | 'azul', cores: CoresObj) {
+function traduzirCor(cor: CoresChaves, cores: CoresObj) {
     return cores[cor];
 }
 
