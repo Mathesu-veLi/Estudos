@@ -1,13 +1,13 @@
 export class Pessoa {
     constructor(
-        private readonly nome: string,
-        private readonly sobrenome: string,
+        private nome: string,
+        private sobrenome: string,
         private idade: number,
         private cpf: string,
     ) {}
 
-    getNome(): string {
-        return this.nome;
+    setCpf(valor: string): void {
+        this.cpf = valor;
     }
 
     getCpf(): string {
@@ -16,4 +16,5 @@ export class Pessoa {
 }
 
 const pessoa = new Pessoa('Luiz', 'Miranda', 30, '000.000.0000-00');
+pessoa.setCpf('111.111.111-11');
 console.log(pessoa.getCpf());
