@@ -48,6 +48,7 @@ export class MaquinaEscrever extends Ferramenta {
 
 const escritor = new Escritor('Matheus');
 const caneta = new Caneta('Bic');
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const maquinaEscrever = new MaquinaEscrever('Máquina');
 
 escritor.ferramenta = caneta;
