@@ -29,3 +29,28 @@ export class SubCalculadora extends Calculadora {
 const calculadora = new SubCalculadora(10);
 calculadora.add(5).mul(2).pow(2);
 console.log(calculadora);
+
+// Builder  GoF
+export class RequestBuilder {
+    private method: 'get' | 'post' | null = null;
+    private url: string | null = null;
+
+    setMethod(method: 'get' | 'post'): this {
+        this.method = method;
+        return this;
+    }
+
+    setUrl(url: string): this {
+        this.url = url;
+        return this;
+    }
+
+    send(): void {
+        console.log(`Enviando dados via ${this.method} para ${this.url}`);
+    }
+}
+
+const request = new RequestBuilder();
+request.setUrl('http://localhost:3000');
+request.setMethod('post');
+request.send();
