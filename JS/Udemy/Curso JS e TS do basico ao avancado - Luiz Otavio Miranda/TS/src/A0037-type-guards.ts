@@ -14,5 +14,8 @@ export class Aluno implements Pessoa {
 }
 
 function mostraNome(obj: PessoaOuAnimal): void {
-    if ('nome' in obj) console.log(obj.nome);
+    //if ('nome' in obj) console.log(obj.nome);
+    if (obj instanceof Aluno) console.log(obj.nome);
 }
+
+mostraNome(new Aluno('João'));
