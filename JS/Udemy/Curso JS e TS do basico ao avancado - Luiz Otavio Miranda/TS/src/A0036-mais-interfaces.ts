@@ -10,6 +10,10 @@ interface Pessoa {
     readonly enderecos: string[];
 }
 
+interface Pessoa {
+    readonly idade?: number;
+}
+
 const pessoa: Pessoa = {
     nome: 'Luiz',
     sobrenome: 'Miranda',
