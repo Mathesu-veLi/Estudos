@@ -6,7 +6,12 @@ namespace MeuNamespace {
 
     const pessoa = new PessoaDoNamespace('Luiz');
     console.log(pessoa);
+
+    export namespace OutroNamespace {
+        export const nome = 'Matheus';
+    }
 }
 
 export const pessoa = new MeuNamespace.PessoaDoNamespace('Luiz');
 console.log(pessoa);
+console.log(MeuNamespace.OutroNamespace.nome);
