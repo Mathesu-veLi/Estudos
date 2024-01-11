@@ -1,26 +1,29 @@
-@inverteNomeECor
+@inverteNomeECor('Valor1', 'Valor2')
 export class Animal {
     constructor(
         public nome: string,
         public cor: string,
     ) {}
-}   
+}
 
-function inverteNomeECor<T extends new (...args: any[]) => any>(target: T): T {
-    console.log('decorador recebeu', target);
-    return class extends target {
-        cor: string;
-        nome: string;
+function inverteNomeECor(param1: string, param2: string) {
+    return function <T extends new (...args: any[]) => any>(target: T): T {
+        console.log('decorador recebeu', target);
 
-        constructor(...args: any[]) {
-            super(...args);
-            this.nome = this.inverte(args[0]);
-            this.cor = this.inverte(args[1]);
-        }
+        return class extends target {
+            cor: string;
+            nome: string;
 
-        inverte(valor: string): string {
-            return valor.split('').reverse().join('');
-        }
+            constructor(...args: any[]) {
+                super(...args);
+                this.nome = this.inverte(args[0]);
+                this.cor = this.inverte(args[1]);
+            }
+
+            inverte(valor: string): string {
+                return valor.split('').reverse().join('') + ' ' + param1 + ' ' + param2;
+            }
+        };
     };
 }
 
