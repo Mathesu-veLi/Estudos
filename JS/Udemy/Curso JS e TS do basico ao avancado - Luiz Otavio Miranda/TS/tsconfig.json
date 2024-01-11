@@ -5,6 +5,7 @@
         /* Language and Environment */
         "target": "ES2022",
         "lib": ["ESNext", "DOM"],
+        "allowJs": true,
 
         /* Modules */
         "module": "commonjs",
