@@ -24,7 +24,7 @@ export class Voting {
 export class VotingApp {
     private votes: Voting[] = [];
 
-    addVote(votingIndex: Voting): void {
+    addVoting(votingIndex: Voting): void {
         this.votes.push(votingIndex);
     }
 
@@ -53,6 +53,20 @@ voting1.vote(0);
 voting1.vote(0);
 voting1.vote(2);
 
+const voting2 = new Voting('Qual sua cor favorita?');
+
+voting2.addVoteOption({ option: 'Vermelho', numberOfVotes: 0 });
+voting2.addVoteOption({ option: 'Verde', numberOfVotes: 0 });
+voting2.addVoteOption({ option: 'Azul', numberOfVotes: 0 });
+voting2.vote(1);
+voting2.vote(1);
+voting2.vote(1);
+voting2.vote(2);
+voting2.vote(2);
+voting2.vote(2);
+voting2.vote(0);
+
 const votingApp = new VotingApp();
-votingApp.addVote(voting1);
+votingApp.addVoting(voting1);
+votingApp.addVoting(voting2);
 votingApp.showVotes();
