@@ -10,3 +10,6 @@
 [submodule "JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/JS/Lista-de-tarefas"]
 	path = JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/JS/Secao 14 - React com componentes de classe Basico
 	url = https://github.com/Mathesu-veLi/Lista-de-tarefas.git
+[submodule "JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/JS/Sistema-escolar"]
+	path = JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/JS/secao15_react-base/
+	url = https://github.com/Mathesu-veLi/Sistema-escolar.git
