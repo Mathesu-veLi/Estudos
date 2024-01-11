@@ -1,3 +1,6 @@
 [submodule "JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/Typescript-SOLID"]
 	path = JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/TS-SOLID
 	url = https://github.com/Mathesu-veLi/Typescript-SOLID.git
+[submodule "JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/JS/Phonebook"]
+	path = JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/JS/Secao 11 - Projeto Agenda
+	url = https://github.com/Mathesu-veLi/Phonebook.git
