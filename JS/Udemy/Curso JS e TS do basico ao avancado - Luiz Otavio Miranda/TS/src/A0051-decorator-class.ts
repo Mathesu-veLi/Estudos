@@ -2,9 +2,8 @@ export class Animal {
     constructor(public cor: string) {}
 }
 
-function decorator(target: any): any {
-    console.log('decorator');
-    return target;
+function decorator<T extends new (...args: any[]) => any>(target: T): T {
+    return class extends target {};
 }
 
 const AnimalDecorated = decorator(Animal);
