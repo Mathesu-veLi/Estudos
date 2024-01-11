@@ -4,3 +4,6 @@
 [submodule "JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/JS/Phonebook"]
 	path = JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/JS/Secao 11 - Projeto Agenda
 	url = https://github.com/Mathesu-veLi/Phonebook.git
+[submodule "JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/JS/Api-rest"]
+	path = JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/JS/Secao 13 - API Rest
+	url = https://github.com/Mathesu-veLi/Api-rest.git
