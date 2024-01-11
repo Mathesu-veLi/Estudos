@@ -1,4 +1,4 @@
-@decorator
+@inverteNomeECor
 export class Animal {
     constructor(
         public nome: string,
@@ -6,9 +6,10 @@ export class Animal {
     ) {}
 }
 
-function decorator<T extends new (...args: any[]) => any>(target: T): T {
+function inverteNomeECor<T extends new (...args: any[]) => any>(target: T): T {
     return class extends target {
         cor: string;
+        nome: string;
 
         constructor(...args: any[]) {
             super(...args);
