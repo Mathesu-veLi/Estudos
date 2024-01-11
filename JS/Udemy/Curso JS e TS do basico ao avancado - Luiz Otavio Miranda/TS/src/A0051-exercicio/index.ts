@@ -34,6 +34,25 @@ export class VotingApp {
             for (const voteOption of vote.voteOption) {
                 console.log(voteOption.option, voteOption.numberOfVotes);
             }
+            console.log('###');
+            console.log('');
         }
     }
 }
+
+const voting1 = new Voting('Qual sua linguagem de programação favorita?');
+
+voting1.addVoteOption({ option: 'Python', numberOfVotes: 0 });
+voting1.addVoteOption({ option: 'JavaScript', numberOfVotes: 0 });
+voting1.addVoteOption({ option: 'TypeScript', numberOfVotes: 0 });
+voting1.vote(1);
+voting1.vote(1);
+voting1.vote(0);
+voting1.vote(0);
+voting1.vote(0);
+voting1.vote(0);
+voting1.vote(2);
+
+const votingApp = new VotingApp();
+votingApp.addVote(voting1);
+votingApp.showVotes();
