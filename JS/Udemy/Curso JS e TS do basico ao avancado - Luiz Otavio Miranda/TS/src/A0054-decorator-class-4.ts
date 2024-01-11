@@ -1,3 +1,4 @@
+@outroDecorador('param')
 @inverteNomeECor('Valor1', 'Valor2')
 export class Animal {
     constructor(
@@ -7,7 +8,7 @@ export class Animal {
 }
 
 function inverteNomeECor(param1: string, param2: string) {
-    return function <T extends new (...args: any[]) => any>(target: T): T {
+    return function (target: Constructor) {
         console.log('decorador recebeu', target);
 
         return class extends target {
@@ -25,6 +26,17 @@ function inverteNomeECor(param1: string, param2: string) {
             }
         };
     };
+}
+
+function outroDecorador(param1: string) {
+    return function (target: Constructor) {
+        console.log('Sou outro decorador' + param1);
+        return target;
+    };
+}
+
+interface Constructor {
+    new (...args: any[]): any;
 }
 
 const animal = new Animal('Levi', 'roxo');
