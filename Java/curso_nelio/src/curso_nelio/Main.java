@@ -6,14 +6,15 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner sc = new Scanner(System.in);
+		int x = 11;
 		
-		int x;
-		
-		x = sc.nextInt();
-		System.out.printf("Você digitou: %s", x);
-		
-		sc.close();
+		if (x <= 5) {
+			System.out.println("Bom dia");
+		} else if (x <= 10) {
+			System.out.println("Boa tarde");
+		} else {
+			System.out.println("Boa noite");
+		}
 	}
 
 }
