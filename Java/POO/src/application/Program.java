@@ -24,10 +24,10 @@ public class Program {
 		y.c = sc.nextDouble();
 		
 		
-		System.out.printf("Triangle X area: %.4f%n", areaX);
-		System.out.printf("Triangle Y area: %.4f%n", areaY);
+		System.out.printf("Triangle X area: %.4f%n", x.calculateArea());
+		System.out.printf("Triangle Y area: %.4f%n", y.calculateArea());
 		
-		if (areaX > areaY) {
+		if (x.calculateArea() > y.calculateArea()) {
 			System.out.println("Larger area: X");
 		} else {
 			System.out.println("Larger area: Y");
