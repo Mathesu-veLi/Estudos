@@ -7,7 +7,6 @@ public class Program {
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		double xA, xB, xC, yA, yB, yC;
 		
 		System.out.println("ENter the measures of triangle X: ");
 		xA = sc.nextDouble();
