@@ -23,7 +23,7 @@ public class Program2 {
 		System.out.println("Product data: " + product);
 		
 		System.out.println();
-		System.out.println("Enter the number of product to be added in stock: ");
+		System.out.print("Enter the number of product to be added in stock: ");
 		int quantity = sc.nextInt();
 		product.addProducts(quantity);
 			
@@ -31,7 +31,7 @@ public class Program2 {
 		System.out.println("Updated data: " + product);
 		
 		System.out.println();
-		System.out.println("Enter the number of product to be removed from stock: ");
+		System.out.print("Enter the number of product to be removed from stock: ");
 		quantity = sc.nextInt();
 		product.removeProducts(quantity);
 		
