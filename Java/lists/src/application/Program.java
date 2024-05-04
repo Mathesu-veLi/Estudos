@@ -24,5 +24,9 @@ public class Program {
         for (String name : list) {
             System.out.println(name);
         }
+        System.out.println("-----------");
+        System.out.println("Index of Bob: " + list.indexOf("Bob"));
+        System.out.println("Index of Marco: " + list.indexOf("Marco"));
+        
     }
 }
