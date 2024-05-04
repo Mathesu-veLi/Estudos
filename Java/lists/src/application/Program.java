@@ -13,7 +13,13 @@ public class Program {
         list.add("Anna");
         list.add(2, "Marco");
 
-        list.remove(1)
+        for (String name : list) {
+            System.out.println(name);
+        }
+
+        System.out.println("-------------");
+        list.removeIf(x -> x.charAt(0) == 'M');
+
 
         for (String name : list) {
             System.out.println(name);
