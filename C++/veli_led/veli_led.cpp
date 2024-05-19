@@ -26,3 +26,10 @@ void veli_led::off_while_tmp(int tmp) {
   delay(tmp);
   on();
 }
+
+void blink(int times, int tmp) {
+  for (int i = 0; i < times; i++) {
+    on_while_tmp(tmp);
+    delay(tmp);
+  }
+}
