@@ -15,3 +15,14 @@ void veli_led::off() {
   digitalWrite(this->pin, LOW);
 }
 
+void veli_led::on_while_tmp(int tmp) {
+  on();
+  delay(tmp);
+  off();
+}
+
+void veli_led::off_while_tmp(int tmp) {
+  off();
+  delay(tmp);
+  on();
+}
