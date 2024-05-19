@@ -24,3 +24,11 @@ double veli_ultrasonic::cm_distance() {
   return -1.0;
 }
 
+double veli_ultrasonic::m_distance() {
+  double cm_distance = this.cm_distance();
+
+  if (cm_distance != -1.0) {
+    return cm_distance / 100.0;
+  }
+  return cm_distance;
+}
