@@ -1,0 +1,8 @@
+# Class Keyword
+veli_ultrasonic KEYWORD1
+
+# method to calculate distance in cm keyword
+cm_distance KEYWORD2
+
+#method to calculate distance in m method
+m_distance KEYWORD3
