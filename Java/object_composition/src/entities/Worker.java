@@ -59,4 +59,12 @@ public class Worker {
     public void setContracts(List<HourContract> contracts) {
         this.contracts = contracts;
     }
+
+    public void addContract(HourContract newContract) {
+        contracts.add(newContract);
+    }
+
+    public void removeContract(HourContract contract) {
+        contracts.remove(contract);
+    }
 }
