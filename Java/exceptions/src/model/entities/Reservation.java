@@ -46,7 +46,7 @@ public class Reservation {
     sb.append(String.format("Room: %d, ", roomNumber));
     sb.append(String.format("check-in: %s, ", sdf.format(checkIn)));
     sb.append(String.format("checkOut: %s, ", sdf.format(checkOut)));
-    sb.append(String.format("%d nights", sdf.format(duration())));
+    sb.append(String.format("%d nights.", sdf.format(duration())));
     return sb.toString();
   }
 }
