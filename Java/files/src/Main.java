@@ -15,7 +15,9 @@ public class Main {
     } catch(FileNotFoundException e) {
       System.out.println("Error: " + e.getMessage());
     } finally {
-      sc.close();
+      if (sc != null) {
+        sc.close();
+      }
     }
   }
 }
