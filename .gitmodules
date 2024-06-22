@@ -19,3 +19,6 @@
 [submodule "JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/TS-SOLID"]
 	path = JS/Udemy/Curso JS e TS do basico ao avancado - Luiz Otavio Miranda/TS-SOLID
 	url = https://github.com/Mathesu-veLi/Typescript-SOLID.git
+[submodule "Java/chess"]
+	path = Java/chess
+	url = https://github.com/Mathesu-veLi/Chess.git
