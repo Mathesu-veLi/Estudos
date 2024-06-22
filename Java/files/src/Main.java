@@ -15,6 +15,12 @@ public class Main {
       System.out.println(folder);
     }
 
+    File[] files = path.listFiles(File::isFile);
+    System.out.println("Files: ");
+    for(File file : files) {
+      System.out.println(file);
+    }
+
     sc.close();
   }
 }
