@@ -11,16 +11,20 @@ public class Main {
     String stringPath = sc.nextLine();
     File originalFile = new File(stringPath);
 
+    copyProductsWithTotalPriceToSummary(originalFile);
+
+    sc.close();
+  }
+
+  private static void copyProductsWithTotalPriceToSummary (File originalFile) {
     try (BufferedReader originalFileReader = new BufferedReader(new FileReader(originalFile))) {
       createFolderIfNoExist(originalFile.getParent());
 
       String summaryPath = String.format("%s/out/summary.csv", originalFile.getParent());
-      writeInSummary(summaryPath, originalFileReader);
+      writeInSummaryWithTotalPrice(summaryPath, originalFileReader);
     } catch (IOException e) {
       System.out.println("Error reading file: " + e.getMessage());
     }
-
-    sc.close();
   }
 
   private static void createFolderIfNoExist (String folderParent) {
@@ -30,17 +34,13 @@ public class Main {
     }
   }
 
-  private static void writeInSummary (String summaryPath, BufferedReader originalFileReader) {
-    try (BufferedWriter summary = new BufferedWriter(new FileWriter(summaryPath))) {
-      String line = originalFileReader.readLine();
+  private static void writeInSummaryWithTotalPrice (String summaryPath, BufferedReader originalFileReader) {
+    try (BufferedWriter summaryWriter = new BufferedWriter(new FileWriter(summaryPath))) {
+      String product = originalFileReader.readLine();
 
-      while (line != null) {
-        String[] productData = line.split(",");
-        double totalPrice = Double.parseDouble(productData[1]) * Double.parseDouble(productData[2]);
-        line = String.format("%s,%.2f", productData[0], totalPrice);
-
-        writeLn(summary, line);
-        line = originalFileReader.readLine();
+      while (product != null) {
+        writeLn(summaryWriter, getProductWithTotalPrice(product));
+        product = originalFileReader.readLine();
       }
     } catch (IOException e) {
       System.out.println("Error writing in summary: " + e.getMessage());
@@ -50,5 +50,18 @@ public class Main {
   private static void writeLn (BufferedWriter summary, String line) throws IOException {
     summary.write(line);
     summary.newLine();
+  }
+
+  private static String getProductWithTotalPrice (String product) {
+    String[] productData = product.split(",");
+    String name = productData[0];
+    double price = Double.parseDouble(productData[1]);
+    int quantity = Integer.parseInt(productData[2]);
+
+    return String.format("%s,%.2f", name, getProductTotalPrice(price, quantity));
+  }
+
+  private static double getProductTotalPrice (double price, int quantity) {
+    return price * (double) quantity;
   }
 }
