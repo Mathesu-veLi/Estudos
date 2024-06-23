@@ -12,24 +12,12 @@ public class Main {
     File originalFile = new File(stringPath);
 
     try (BufferedReader originalFileReader = new BufferedReader(new FileReader(originalFile))) {
-      String line = originalFileReader.readLine();
-      String summaryPath = String.format("%s/out/summary.csv", originalFile.getParent());
-
       createFolderIfNoExist(originalFile.getParent());
 
-      try (BufferedWriter summary = new BufferedWriter(new FileWriter(summaryPath))) {
-        while (line != null) {
-          summary.write(line);
-          summary.newLine();
-          line = originalFileReader.readLine();
-        }
-      } catch (FileNotFoundException e) {
-        System.out.println("Error: " + e.getMessage());
-        System.out.println("2");
-      }
+      String summaryPath = String.format("%s/out/summary.csv", originalFile.getParent());
+      writeInSummary(summaryPath, originalFileReader);
     } catch (IOException e) {
-      System.out.println("Error: " + e.getMessage());
-      System.out.println("1");
+      System.out.println("Error reading file: " + e.getMessage());
     }
 
     sc.close();
@@ -40,5 +28,23 @@ public class Main {
     if (!folder.exists()) {
       folder.mkdir();
     }
+  }
+
+  private static void writeInSummary (String summaryPath, BufferedReader originalFileReader) {
+    try (BufferedWriter summary = new BufferedWriter(new FileWriter(summaryPath))) {
+      String line = originalFileReader.readLine();
+
+      while (line != null) {
+        writeLn(summary, line);
+        line = originalFileReader.readLine();
+      }
+    } catch (IOException e) {
+      System.out.println("Error writing in summary: " + e.getMessage());
+    }
+  }
+
+  private static void writeLn (BufferedWriter summary, String line) throws IOException {
+    summary.write(line);
+    summary.newLine();
   }
 }
