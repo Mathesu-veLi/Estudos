@@ -35,6 +35,10 @@ public class Main {
       String line = originalFileReader.readLine();
 
       while (line != null) {
+        String[] productData = line.split(",");
+        double totalPrice = Double.parseDouble(productData[1]) * Double.parseDouble(productData[2]);
+        line = String.format("%s,%.2f", productData[0], totalPrice);
+
         writeLn(summary, line);
         line = originalFileReader.readLine();
       }
