@@ -1,9 +1,6 @@
 import entites.Product;
-import util.UpperCaseName;
 
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 public class Main {
   public static void main (String[] args) {
@@ -15,9 +12,7 @@ public class Main {
     list.add(new Product("Tablet", 350.00));
     list.add(new Product("HD Case", 80.90));
 
-    Function<Product, String> upperCaseFunction = p -> p.getName().toUpperCase();
-
-    List<String> names = list.stream().map(upperCaseFunction).toList();
+    List<String> names = list.stream().map(p -> p.getName().toUpperCase()).toList();
     names.forEach(System.out::println);
   }
 }
