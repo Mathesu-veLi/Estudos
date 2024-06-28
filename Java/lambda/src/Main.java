@@ -1,7 +1,7 @@
 import entites.Product;
-import util.ProductPredicate;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 public class Main {
   public static void main (String[] args) {
@@ -13,7 +13,9 @@ public class Main {
     list.add(new Product("Tablet", 350.00));
     list.add(new Product("HD Case", 80.90));
 
-    list.removeIf(Product::nonStaticProductPredicate);
+    Predicate<Product> productPredicate = p -> p.getPrice() >= 100.0;
+
+    list.removeIf(productPredicate);
 
     for (Product p : list) {
       System.out.println(p);
