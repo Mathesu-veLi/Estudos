@@ -1,9 +1,10 @@
 package dao;
 
 import dao.impl.SellerDaoImpl;
+import db.DB;
 
 public class DaoFactory {
   public static SellerDao createSellerDao () {
-    return new SellerDaoImpl();
+    return new SellerDaoImpl(DB.getConn());
   }
 }
