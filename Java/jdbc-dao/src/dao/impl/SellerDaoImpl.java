@@ -1,11 +1,21 @@
 package dao.impl;
 
 import dao.SellerDao;
+import db.DB;
+import db.DbException;
+import entities.Department;
 import entities.Seller;
 
+import java.sql.*;
 import java.util.List;
 
 public class SellerDaoImpl implements SellerDao {
+  private Connection conn;
+
+  public SellerDaoImpl (Connection conn) {
+    this.conn = conn;
+  }
+
   @Override
   public void insert (Seller obj) {
 
