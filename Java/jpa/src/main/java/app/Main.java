@@ -13,7 +13,9 @@ public class Main {
 
 		Pessoa p = em.find(Pessoa.class, 1);
 
-		System.out.println(p);
+		em.getTransaction().begin();
+		em.remove(p);
+		em.getTransaction().commit();
 
 		System.out.println("Pronto!");
 		em.close();
