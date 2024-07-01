@@ -1,5 +1,6 @@
 package com.veli.spring.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.veli.spring.entities.pk.OrderItemPK;
 import jakarta.persistence.*;
 
@@ -9,7 +10,7 @@ import java.util.Objects;
 @Table(name = "tb_order_item")
 public class OrderItem {
   @EmbeddedId
-  private OrderItemPK id;
+  private OrderItemPK id = new OrderItemPK();
   private Integer quantity;
   private Double price;
 
@@ -39,6 +40,7 @@ public class OrderItem {
     this.price = price;
   }
 
+  @JsonIgnore
   public Order getOrder () {
     return id.getOrder();
   }
