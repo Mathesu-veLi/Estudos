@@ -41,9 +41,13 @@ public class UserService {
   }
 
   public User update (Long id, User obj) {
-    User entity = repository.getReferenceById(id);
-    updateData(entity, obj);
-    return entity;
+    try {
+      User entity = repository.getReferenceById(id);
+      updateData(entity, obj);
+      return entity;
+    } catch (EmptyResultDataAccessException e) {
+      throw new ResourceNotFoundException(id);
+    }
   }
 
   private void updateData (User entity, User obj) {
