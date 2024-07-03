@@ -3,6 +3,7 @@ package com.veli.workshopmongo.config;
 import com.veli.workshopmongo.domain.Post;
 import com.veli.workshopmongo.domain.User;
 import com.veli.workshopmongo.dto.AuthorDTO;
+import com.veli.workshopmongo.dto.CommentDTO;
 import com.veli.workshopmongo.repository.PostRepository;
 import com.veli.workshopmongo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,11 @@ public class Instantiation implements CommandLineRunner {
                           new AuthorDTO(maria));
     Post post2 = new Post(null, sdf.parse("23/03/2018"), "Bom dia",
                           "Acordei feliz hoje!", new AuthorDTO(maria));
+
+    CommentDTO c1 = new CommentDTO("Boa viagem mano!", sdf.parse("21/03/2018"),
+                                   new AuthorDTO(alex));
+
+    post1.getComments().add(c1);
 
     postRepository.saveAll(Arrays.asList(post1, post2));
 
