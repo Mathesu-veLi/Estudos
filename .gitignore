@@ -4,6 +4,6 @@ Java/.metadata/
 
 C\+\+/output/
 
-Java/*/.idea/
-Java/*/out/
-Java/*/bin/
+Java/**/.idea/
+Java/**/out/
+Java/**/bin/
