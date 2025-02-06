@@ -7,6 +7,10 @@ public class Account {
     balance += amount;
   }
 
+  void withdraw(double amount) {
+    balance -= amount;
+  }
+
   void getBalance() {
     System.out.println("Balance: " + balance);
   }
