@@ -19,6 +19,11 @@ public class Account {
     return false;
   }
 
+  void transfer(double amount, Account targetAccount) {
+    this.withdraw(amount);
+    targetAccount.deposit(amount);
+  }
+
   void getBalance() {
     System.out.println("Balance: " + balance);
   }
