@@ -3,7 +3,13 @@ public class EncapsulatedAccount {
   private String accountOwner;
   private double balance;
 
-  boolean deposit(double amount) {
+  public EncapsulatedAccount (String accountNumber) {
+    this.accountNumber = accountNumber;
+  }
+
+
+
+  boolean deposit (double amount) {
     if (amount > 0) {
       balance += amount;
       return true;
