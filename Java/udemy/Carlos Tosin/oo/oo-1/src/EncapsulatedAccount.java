@@ -1,6 +1,6 @@
 public class EncapsulatedAccount {
-  private String accountNumber;
-  private String accountOwner;
+  private final String accountNumber;
+  private final String accountOwner;
   private double balance;
 
   public EncapsulatedAccount (String accountNumber, String accountOwner,
@@ -55,16 +55,8 @@ public class EncapsulatedAccount {
     return accountNumber;
   }
 
-  public void setAccountNumber (String accountNumber) {
-    this.accountNumber = accountNumber;
-  }
-
   public String getAccountOwner () {
     return accountOwner;
-  }
-
-  public void setAccountOwner (String accountOwner) {
-    this.accountOwner = accountOwner;
   }
 
   public void setBalance (double balance) {
