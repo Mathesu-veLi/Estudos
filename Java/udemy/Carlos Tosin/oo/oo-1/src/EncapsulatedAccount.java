@@ -3,14 +3,23 @@ public class EncapsulatedAccount {
   private String accountOwner;
   private double balance;
 
-  public EncapsulatedAccount (String accountNumber) {
+  public EncapsulatedAccount (String accountNumber, String accountOwner,
+                              double balance) {
     this.accountNumber = accountNumber;
+    this.accountOwner = accountOwner;
+    this.balance = balance;
   }
 
-  public EncapsulatedAccount (double balance,
-                              String accountNumber) {
-    this.balance = balance;
-    this.accountNumber = accountNumber;
+  public EncapsulatedAccount (String accountNumber) {
+    this(accountNumber, null, 0);
+  }
+
+  public EncapsulatedAccount (String accountOwner, String accountNumber) {
+    this(accountNumber, accountOwner, 0);
+  }
+
+  public EncapsulatedAccount (String accountNumber, double balance) {
+    this(accountNumber, null, balance);
   }
 
   boolean deposit (double amount) {
