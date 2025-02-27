@@ -7,7 +7,11 @@ public class EncapsulatedAccount {
     this.accountNumber = accountNumber;
   }
 
-
+  public EncapsulatedAccount (double balance,
+                              String accountNumber) {
+    this.balance = balance;
+    this.accountNumber = accountNumber;
+  }
 
   boolean deposit (double amount) {
     if (amount > 0) {
