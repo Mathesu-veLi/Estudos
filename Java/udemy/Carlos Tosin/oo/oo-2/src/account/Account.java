@@ -41,4 +41,9 @@ public class Account {
     System.out.println("number: " + number);
     System.out.println("balance: " + balance);
   }
+
+  @Override
+  public String toString() {
+    return number;
+  }
 }
