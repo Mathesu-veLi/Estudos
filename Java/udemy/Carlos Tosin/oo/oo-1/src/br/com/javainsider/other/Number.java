@@ -1,3 +1,5 @@
+package br.com.javainsider.other;
+
 public class Number {
   private static int instances;
   private int number;

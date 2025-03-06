@@ -1,3 +1,5 @@
+package br.com.javainsider.other;
+
 public class ExNumber {
   public static void main (String[] args) {
     var n1 = Number.newNumber(10);

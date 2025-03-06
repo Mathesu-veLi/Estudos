@@ -1,3 +1,5 @@
+package br.com.javainsider.other;
+
 public class ExLamp {
   public static void main (String[] args) {
     Lamp l1 = new Lamp(true);
