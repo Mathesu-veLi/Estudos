@@ -3,6 +3,9 @@ package account;
 public class SavingsAccount extends Account {
   private double rate;
 
+  public SavingsAccount() {
+  }
+
   public SavingsAccount(String number) {
     super(number);
   }
