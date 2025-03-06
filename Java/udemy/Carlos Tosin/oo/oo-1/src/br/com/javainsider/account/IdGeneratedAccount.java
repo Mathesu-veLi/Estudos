@@ -1,4 +1,4 @@
-package br.com.javainsider;
+package br.com.javainsider.account;
 
 public class IdGeneratedAccount {
   private static final int INITIAL_VALUE = 10;

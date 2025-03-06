@@ -1,6 +1,6 @@
 package br.com.javainsider.app;
 
-import br.com.javainsider.EncapsulatedAccount;
+import br.com.javainsider.account.EncapsulatedAccount;
 
 public class App4 {
   public static void main (String[] args) {

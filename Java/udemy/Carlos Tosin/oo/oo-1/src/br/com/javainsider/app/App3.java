@@ -1,6 +1,6 @@
 package br.com.javainsider.app;
 
-import br.com.javainsider.Account;
+import br.com.javainsider.account.Account;
 
 public class App3 {
   public static void main (String[] args) {

@@ -1,6 +1,6 @@
 package br.com.javainsider.app;
 
-import br.com.javainsider.IdGeneratedAccount;
+import br.com.javainsider.account.IdGeneratedAccount;
 
 public class App7 {
   public static void main (String[] args) {

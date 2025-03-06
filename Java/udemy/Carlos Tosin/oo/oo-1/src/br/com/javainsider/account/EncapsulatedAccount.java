@@ -1,4 +1,4 @@
-package br.com.javainsider;
+package br.com.javainsider.account;
 
 public class EncapsulatedAccount {
   private final String accountNumber;
