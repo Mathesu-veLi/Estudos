@@ -2,7 +2,7 @@ public class Number {
   private static int instances;
   private int number;
 
-  public Number (int number) {
+  private Number (int number) {
     this.number = number;
     instances++;
   }
@@ -17,5 +17,9 @@ public class Number {
 
   public static int getInstances () {
     return instances;
+  }
+
+  public static Number newNumber(int n) {
+    return new Number(n);
   }
 }
