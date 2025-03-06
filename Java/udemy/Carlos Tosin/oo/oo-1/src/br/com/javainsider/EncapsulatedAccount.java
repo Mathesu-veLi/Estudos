@@ -1,3 +1,5 @@
+package br.com.javainsider;
+
 public class EncapsulatedAccount {
   private final String accountNumber;
   private final String accountOwner;

@@ -1,3 +1,5 @@
+package br.com.javainsider;
+
 public class IdGeneratedAccount {
   private static final int INITIAL_VALUE = 10;
 

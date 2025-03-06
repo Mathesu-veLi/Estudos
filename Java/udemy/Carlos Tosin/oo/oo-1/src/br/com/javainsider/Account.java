@@ -1,7 +1,9 @@
+package br.com.javainsider;
+
 public class Account {
-  String accountNumber;
-  String accountOwner;
-  double balance;
+  public String accountNumber;
+  public String accountOwner;
+  public double balance;
 
   boolean deposit(double amount) {
     if (amount > 0) {
