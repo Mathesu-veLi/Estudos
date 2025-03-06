@@ -1,37 +1,13 @@
 package account;
 
-public class SavingsAccount {
-  private String owner;
-  private String number;
-  private double balance;
+public class SavingsAccount extends Account {
+  private double rate;
 
-  public String getOwner() {
-    return owner;
+  public double getRate() {
+    return rate;
   }
 
-  public void setOwner(String owner) {
-    this.owner = owner;
-  }
-
-  public String getNumber() {
-    return number;
-  }
-
-  public void setNumber(String number) {
-    this.number = number;
-  }
-
-  public double getBalance() {
-    return balance;
-  }
-
-  public void setBalance(double balance) {
-    this.balance = balance;
-  }
-
-  public void print() {
-    System.out.println(
-        "Account{" + "owner=" + owner + '\'' + ", number='" + number + '\'' +
-            ", balance=" + balance + '}');
+  public void setRate(double rate) {
+    this.rate = rate;
   }
 }
