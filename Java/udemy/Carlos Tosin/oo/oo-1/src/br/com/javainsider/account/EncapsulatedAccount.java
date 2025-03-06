@@ -24,7 +24,7 @@ public class EncapsulatedAccount {
     this(accountNumber, null, balance);
   }
 
-  boolean deposit (double amount) {
+  public boolean deposit(double amount) {
     if (amount > 0) {
       balance += amount;
       return true;
@@ -32,11 +32,11 @@ public class EncapsulatedAccount {
     return false;
   }
 
-  boolean deposit(String amount) {
+  public boolean deposit(String amount) {
     return deposit(Double.parseDouble(amount));
   }
 
-  boolean withdraw(double amount) {
+  public boolean withdraw(double amount) {
     if (balance >= amount && amount > 0) {
       balance -= amount;
       return true;
@@ -44,12 +44,12 @@ public class EncapsulatedAccount {
     return false;
   }
 
-  void transfer (double amount, EncapsulatedAccount targetAccount) {
+  public void transfer(double amount, Account targetAccount) {
     this.withdraw(amount);
     targetAccount.deposit(amount);
   }
 
-  void printBalance () {
+  public void getBalance() {
     System.out.println("Balance: " + balance);
   }
 
@@ -63,9 +63,5 @@ public class EncapsulatedAccount {
 
   public void setBalance (double balance) {
     this.balance = balance;
-  }
-
-  public double getBalance () {
-    return balance;
   }
 }

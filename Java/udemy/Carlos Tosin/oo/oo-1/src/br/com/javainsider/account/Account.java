@@ -5,7 +5,7 @@ public class Account {
   public String accountOwner;
   public double balance;
 
-  boolean deposit(double amount) {
+  public boolean deposit(double amount) {
     if (amount > 0) {
       balance += amount;
       return true;
@@ -13,11 +13,11 @@ public class Account {
     return false;
   }
 
-  boolean deposit(String amount) {
+  public boolean deposit(String amount) {
     return deposit(Double.parseDouble(amount));
   }
 
-  boolean withdraw(double amount) {
+  public boolean withdraw(double amount) {
     if (balance >= amount && amount > 0) {
       balance -= amount;
       return true;
@@ -25,12 +25,12 @@ public class Account {
     return false;
   }
 
-  void transfer(double amount, Account targetAccount) {
+  public void transfer(double amount, Account targetAccount) {
     this.withdraw(amount);
     targetAccount.deposit(amount);
   }
 
-  void getBalance() {
+  public void getBalance() {
     System.out.println("Balance: " + balance);
   }
 }

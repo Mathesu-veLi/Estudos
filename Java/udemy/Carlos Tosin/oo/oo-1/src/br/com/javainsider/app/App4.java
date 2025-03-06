@@ -9,6 +9,6 @@ public class App4 {
 
     System.out.println(a.getAccountNumber());
 
-    a.printBalance();
+    a.getBalance();
   }
 }
