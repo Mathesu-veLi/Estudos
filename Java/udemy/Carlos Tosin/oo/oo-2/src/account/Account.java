@@ -30,8 +30,8 @@ public class Account {
   }
 
   public void print() {
-    System.out.println(
-        "Account{" + "owner=" + owner + '\'' + ", number='" + number + '\'' +
-            ", balance=" + balance + '}');
+    System.out.println("owner: " + owner);
+    System.out.println("number: " + number);
+    System.out.println("balance: " + balance);
   }
 }

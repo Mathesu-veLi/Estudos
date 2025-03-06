@@ -15,4 +15,10 @@ public class SavingsAccount extends Account {
   public void setBalance(double balance) {
     this.balance = balance * rate;
   }
+
+  @Override
+  public void print() {
+    super.print();
+    System.out.println("rate: " + rate);
+  }
 }
