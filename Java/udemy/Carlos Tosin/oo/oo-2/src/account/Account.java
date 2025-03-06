@@ -3,7 +3,7 @@ package account;
 public class Account {
   private String owner;
   private String number;
-  private double balance;
+  protected double balance;
 
   public String getOwner() {
     return owner;

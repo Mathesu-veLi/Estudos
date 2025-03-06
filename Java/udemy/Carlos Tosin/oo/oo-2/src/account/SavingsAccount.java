@@ -10,4 +10,9 @@ public class SavingsAccount extends Account {
   public void setRate(double rate) {
     this.rate = rate;
   }
+
+  @Override
+  public void setBalance(double balance) {
+    this.balance = balance * rate;
+  }
 }

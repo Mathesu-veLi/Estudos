@@ -9,10 +9,13 @@ public class App1 {
     a1.setNumber("1234");
     a1.setOwner("Pedro");
     a1.setBalance(1000);
+    a1.print();
 
     SavingsAccount a2 = new SavingsAccount();
     a2.setNumber("1234");
     a2.setOwner("Maria");
     a2.setBalance(1000);
+    a2.setRate(1.2);
+    a2.print();
   }
 }
