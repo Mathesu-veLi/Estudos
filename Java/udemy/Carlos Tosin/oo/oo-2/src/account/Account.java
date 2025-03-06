@@ -5,6 +5,10 @@ public class Account {
   private String number;
   protected double balance;
 
+  public Account(String number) {
+    this.number = number;
+  }
+
   public String getOwner() {
     return owner;
   }
