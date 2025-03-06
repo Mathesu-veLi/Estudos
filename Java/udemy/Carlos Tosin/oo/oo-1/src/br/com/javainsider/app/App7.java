@@ -1,3 +1,7 @@
+package br.com.javainsider.app;
+
+import br.com.javainsider.IdGeneratedAccount;
+
 public class App7 {
   public static void main (String[] args) {
     var a1 = new IdGeneratedAccount("Pedro");

@@ -1,3 +1,7 @@
+package br.com.javainsider.app;
+
+import br.com.javainsider.EncapsulatedAccount;
+
 public class App4 {
   public static void main (String[] args) {
     var a = new EncapsulatedAccount("2345");

@@ -1,3 +1,7 @@
+package br.com.javainsider.app;
+
+import br.com.javainsider.Account;
+
 public class App3 {
   public static void main (String[] args) {
     Account a = new Account();
