@@ -1,0 +1,18 @@
+package app;
+
+import account.Account;
+import account.SavingsAccount;
+
+public class App1 {
+  public static void main(String[] args) {
+    Account a1 = new Account();
+    a1.setNumber("1234");
+    a1.setOwner("Pedro");
+    a1.setBalance(1000);
+
+    SavingsAccount a2 = new SavingsAccount();
+    a2.setNumber("1234");
+    a2.setOwner("Maria");
+    a2.setBalance(1000);
+  }
+}
