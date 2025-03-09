@@ -4,4 +4,9 @@ public abstract class WaterPet extends Pet {
   public void swim() {
     System.out.println("WaterPet swim");
   }
+
+  @Override
+  public void sleep(int time) {
+    System.out.println("WaterPet sleeping");
+  }
 }

@@ -19,4 +19,6 @@ public abstract class Pet {
   public int getAmountEaten() {
     return amountEaten;
   }
+
+  public abstract void sleep(int time);
 }

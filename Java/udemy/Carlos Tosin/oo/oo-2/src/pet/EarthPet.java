@@ -12,4 +12,9 @@ public abstract class EarthPet extends Pet {
   public void walk() {
     System.out.println("EarthPet walk");
   }
+
+  @Override
+  public void sleep(int time) {
+    System.out.println("EarthPet sleeping");
+  }
 }
