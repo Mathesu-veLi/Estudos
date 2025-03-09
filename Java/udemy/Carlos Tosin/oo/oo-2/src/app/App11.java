@@ -13,5 +13,8 @@ public class App11 {
 
     PersonRecord personRecord2 = new PersonRecord("José", "Silva", 33);
     System.out.println(personRecord2.equals(personRecord));
+
+    PersonRecord personRecord3 = new PersonRecord("José", "Silva");
+    System.out.println(personRecord3);
   }
 }
