@@ -15,6 +15,9 @@ public class App11 {
     System.out.println(personRecord2.equals(personRecord));
 
     PersonRecord personRecord3 = new PersonRecord("José", "Silva");
-    System.out.println(personRecord3);
+    System.out.println(personRecord3.fullName());
+
+    PersonRecord personRecord4 = PersonRecord.create("Pedro");
+    System.out.println(personRecord4.fullName());
   }
 }
