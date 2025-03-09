@@ -5,4 +5,8 @@ public class Dog extends Pet {
   public void feed() {
     System.out.println("Dog feed");
   }
+
+  public void sit() {
+    System.out.println("Dog sitting");
+  }
 }
