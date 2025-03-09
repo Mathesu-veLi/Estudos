@@ -9,6 +9,7 @@ public class App7 {
 
     feedPet(d);
     feedPet(c);
+    feedPet(new Fish());
   }
 
   private static void feedPet(Pet p) {
