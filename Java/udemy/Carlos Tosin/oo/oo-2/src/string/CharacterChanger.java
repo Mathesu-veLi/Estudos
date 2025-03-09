@@ -2,6 +2,10 @@ package string;
 
 public interface CharacterChanger {
   default String upper(String s) {
-    return "*" + s.substring(1);
+    return getChar() + s.substring(1);
+  }
+
+  private char getChar() {
+    return '*';
   }
 }
