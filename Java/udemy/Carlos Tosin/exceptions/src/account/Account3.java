@@ -1,5 +1,7 @@
 package account;
 
+import exceptions.InsufficientFundsException;
+
 public class Account3 {
   private final String number;
   private double balance;
@@ -12,13 +14,13 @@ public class Account3 {
     this.balance += amount;
   }
 
-  public void withdraw(double amount) throws Exception {
+  public void withdraw(double amount) throws InsufficientFundsException {
     if(amount < 0) {
-      throw new Exception("Amount cannot be negative");
+      throw new RuntimeException("Amount cannot be negative");
     }
 
     if(balance - amount < 0) {
-      throw new Exception("Insufficient funds");
+      throw new InsufficientFundsException(balance);
     }
 
     this.balance -= amount;
