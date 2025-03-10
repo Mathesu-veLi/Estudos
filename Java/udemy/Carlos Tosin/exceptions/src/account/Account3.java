@@ -12,13 +12,13 @@ public class Account3 {
     this.balance += amount;
   }
 
-  public void withdraw(double amount) {
+  public void withdraw(double amount) throws Exception {
     if(amount < 0) {
-      throw new RuntimeException("Amount cannot be negative");
+      throw new Exception("Amount cannot be negative");
     }
 
     if(balance - amount < 0) {
-      throw new RuntimeException("Insufficient funds");
+      throw new Exception("Insufficient funds");
     }
 
     this.balance -= amount;
