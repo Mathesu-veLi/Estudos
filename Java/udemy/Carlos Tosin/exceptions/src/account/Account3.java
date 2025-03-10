@@ -18,7 +18,7 @@ public class Account3 {
     }
 
     if(balance - amount < 0) {
-      throw new RuntimeException("Amount cannot be negative");
+      throw new RuntimeException("Insufficient funds");
     }
 
     this.balance -= amount;
