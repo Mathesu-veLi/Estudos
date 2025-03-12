@@ -9,5 +9,8 @@ public class App1 {
 
     System.out.println(s2 == s3);
     System.out.println(s4 == s3);
+
+    System.out.println(s2.equals(s3));
+    System.out.println(s3.equals(s4));
   }
 }
