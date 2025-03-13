@@ -13,4 +13,9 @@ public enum Month {
   public int getMonthNum() {
     return monthNum;
   }
+
+  @Override
+  public String toString() {
+    return "Month: " + name();
+  }
 }
