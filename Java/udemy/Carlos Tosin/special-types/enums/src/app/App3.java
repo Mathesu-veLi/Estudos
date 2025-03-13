@@ -1,5 +1,6 @@
 package app;
 
+import enums.MyPet;
 import interfaces.Pet;
 
 public class App3 {
