@@ -9,7 +9,7 @@ public class App3 {
 
     Locale locale = new Locale("pt", "BR");
 
-    NumberFormat nf = NumberFormat.getInstance(locale);
+    NumberFormat nf = NumberFormat.getCurrencyInstance(locale);
     String formatted = nf.format(n);
     System.out.println(formatted);
   }
