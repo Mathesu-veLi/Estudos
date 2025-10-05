@@ -1,0 +1,24 @@
+package sets;
+
+import java.util.HashSet;
+
+public class SetApp3 {
+    public static void main(String[] args) {
+        AccountFail a1 = new AccountFail("123", 100);
+        AccountFail a2 = new AccountFail("456", 200);
+        AccountFail a3 = new AccountFail("456", 200);
+
+        var accounts = new HashSet<AccountFail>();
+        accounts.add(a1);
+        accounts.add(a2);
+        accounts.add(a3);
+
+        for (AccountFail account : accounts) {
+            System.out.println(account);
+        }
+
+        System.out.println(accounts.contains(a1));
+        System.out.println(accounts.contains(a2));
+        System.out.println(accounts.contains(a3));
+    }
+}
