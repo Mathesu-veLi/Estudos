@@ -1,10 +1,11 @@
-import java.time.LocalDate;
+package datetime;
+
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class LocalTimeApp {
     public static void main(String[] args) {
-        LocalTime time1 = LocalTime.of(23,10,15);
+        LocalTime time1 = LocalTime.of(23, 10, 15);
         System.out.println(time1);
 
         LocalTime time2 = LocalTime.now();
