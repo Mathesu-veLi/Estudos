@@ -1,5 +1,6 @@
 package input;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.Writer;
@@ -18,6 +19,16 @@ public class IOOperations {
             c = in.read();
         }
 
+        return text.toString();
+    }
+
+    public static String read(BufferedReader in) throws IOException {
+        StringBuilder text = new StringBuilder();
+        String line;
+        while ((line = in.readLine()) != null) {
+            text.append(line).append("\n");
+        }
+        
         return text.toString();
     }
 }
