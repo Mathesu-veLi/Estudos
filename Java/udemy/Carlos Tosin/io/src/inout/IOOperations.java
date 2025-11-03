@@ -1,9 +1,6 @@
 package inout;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.Reader;
-import java.io.Writer;
+import java.io.*;
 
 public class IOOperations {
     public static void write(Writer out, String text) throws IOException {
@@ -30,5 +27,13 @@ public class IOOperations {
         }
 
         return text.toString();
+    }
+
+    public static byte[] read(InputStream in) throws IOException {
+        return in.readAllBytes();
+    }
+
+    public static void write(OutputStream out, byte[] bytes) throws IOException {
+        out.write(bytes);
     }
 }
