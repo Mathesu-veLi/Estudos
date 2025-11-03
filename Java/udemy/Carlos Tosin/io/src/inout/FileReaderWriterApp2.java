@@ -1,24 +1,18 @@
-package input;
+package inout;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
-public class FileReaderWriter {
+public class FileReaderWriterApp2 {
     public static void main(String[] args) throws IOException {
         try (FileWriter out = new FileWriter("examples/out1.txt", StandardCharsets.UTF_8)) {
-            out.write("Hello");
+            IOOperations.write(out, "Hello!");
         }
 
         try (FileReader in = new FileReader("examples/out1.txt", StandardCharsets.UTF_8)) {
-            int c = in.read();
-            StringBuilder text = new StringBuilder();
-            while (c > 1) {
-                text.append((char) c);
-                c = in.read();
-            }
-
+            String text = IOOperations.read(in);
             System.out.println(text);
         }
     }

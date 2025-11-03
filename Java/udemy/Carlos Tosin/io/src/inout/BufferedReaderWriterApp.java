@@ -1,4 +1,4 @@
-package input;
+package inout;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

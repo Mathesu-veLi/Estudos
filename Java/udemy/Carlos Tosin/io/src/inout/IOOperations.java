@@ -1,4 +1,4 @@
-package input;
+package inout;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -28,7 +28,7 @@ public class IOOperations {
         while ((line = in.readLine()) != null) {
             text.append(line).append("\n");
         }
-        
+
         return text.toString();
     }
 }
