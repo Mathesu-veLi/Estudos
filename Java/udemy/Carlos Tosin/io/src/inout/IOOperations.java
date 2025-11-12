@@ -36,4 +36,14 @@ public class IOOperations {
     public static void write(OutputStream out, byte[] bytes) throws IOException {
         out.write(bytes);
     }
+
+    public static void transfer(InputStream in, OutputStream out) throws IOException {
+      byte[] buffer = new byte[2048];
+      while (true) {
+        int byteRead = in.read(buffer);
+        if(byteRead < 0) break;
+
+        out.write(buffer, 0, byteRead);
+      }
+    }
 }
