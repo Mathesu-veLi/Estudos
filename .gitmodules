@@ -22,3 +22,6 @@
 [submodule "Java/chess"]
 	path = Java/chess
 	url = https://github.com/Mathesu-veLi/Chess.git
+[submodule "Java/udemy/Carlos Tosin/tictactoe"]
+	path = Java/udemy/Carlos Tosin/tictactoe
+	url = https://github.com/Mathesu-veLi/tictactoe
