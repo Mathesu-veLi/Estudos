@@ -11,6 +11,12 @@ public class Operation {
 
     public int execute() {
         Sum sum = new Sum();
-        return sum.calculate(value1, value2);
+        return sum.calculate();
+    }
+
+    private class Sum {
+        public int calculate() {
+            return value1 + value2;
+        }
     }
 }
