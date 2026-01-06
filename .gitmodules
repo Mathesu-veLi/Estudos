@@ -25,3 +25,6 @@
 [submodule "Java/udemy/Carlos Tosin/tictactoe"]
 	path = Java/udemy/Carlos Tosin/tictactoe
 	url = https://github.com/Mathesu-veLi/tictactoe
+[submodule "Java/udemy/Carlos Tosin/hangman"]
+	path = Java/udemy/Carlos Tosin/hangman
+	url = https://github.com/Mathesu-veLi/hangman.git
