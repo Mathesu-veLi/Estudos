@@ -1,6 +1,8 @@
 package staticnested;
 
 public class Operation {
+    private static int initialValue = 10;
+
     private final int value1;
     private final int value2;
     private final Counter counter = new Counter();
@@ -19,8 +21,12 @@ public class Operation {
         return counter;
     }
 
+    public static int getInitialValue() {
+        return initialValue;
+    }
+
     public static class Counter {
-        private int value;
+        private int value = getInitialValue();
 
         public void increment() {
             value++;
