@@ -1,0 +1,17 @@
+public class NumberProvider {
+    private int n;
+
+    public void setN(int n) {
+        this.n = n;
+    }
+
+    public Number provide() {
+        int v = n;
+        return () -> n;
+    }
+
+    @FunctionalInterface
+    public interface Number {
+        int get();
+    }
+}
