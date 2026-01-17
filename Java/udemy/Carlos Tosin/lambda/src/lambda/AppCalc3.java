@@ -1,4 +1,4 @@
-import java.util.Locale;
+package lambda;
 
 public class AppCalc3 {
     public static void main(String[] args) {

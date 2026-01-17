@@ -1,3 +1,5 @@
+package lambda;
+
 public class AppCalc2 {
     public static void main(String[] args) {
         run((n1, n2) -> n1 + n2);

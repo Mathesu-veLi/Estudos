@@ -1,3 +1,5 @@
+package lambda;
+
 public class AppString2 {
     public static void main(String[] args) {
         TextTransformer t = s -> {

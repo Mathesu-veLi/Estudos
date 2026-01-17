@@ -1,3 +1,5 @@
+package lambda;
+
 public class ExRunTrueFalse {
     public static void main(String[] args) {
         run(null, s -> System.out.println("My language is: " + s), () -> System.out.println("My language is none"));

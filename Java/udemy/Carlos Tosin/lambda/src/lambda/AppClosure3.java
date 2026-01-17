@@ -1,3 +1,5 @@
+package lambda;
+
 public class AppClosure3 {
     public static void main(String[] args) {
         NumberProvider p = new NumberProvider();

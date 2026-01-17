@@ -1,3 +1,5 @@
+package lambda;
+
 public class ExRepeat {
     public static void main(String[] args) {
         repeat(5, i -> System.out.println("Number:  " + i));

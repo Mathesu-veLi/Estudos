@@ -1,3 +1,5 @@
+package lambda;
+
 public class AppString5 {
     public static void main(String[] args) {
         createAndPrint(Person::new, "Levi");

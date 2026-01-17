@@ -1,3 +1,5 @@
+package lambda;
+
 public class AppClosure1 {
     public static void main(String[] args) {
         int mult = 2;

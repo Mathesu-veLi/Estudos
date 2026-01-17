@@ -1,3 +1,5 @@
+package lambda;
+
 public class AppCalc1 {
     public static void main(String[] args) {
         Operation sum = new Operation() {

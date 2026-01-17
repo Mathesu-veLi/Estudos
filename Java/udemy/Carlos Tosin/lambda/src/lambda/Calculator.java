@@ -1,3 +1,5 @@
+package lambda;
+
 public class Calculator {
     private int mult;
 
