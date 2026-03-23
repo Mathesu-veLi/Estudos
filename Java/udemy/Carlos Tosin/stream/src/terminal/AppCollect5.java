@@ -10,7 +10,7 @@ public class AppCollect5 {
             .collect(Collectors.groupingBy(
                 i -> i
                     .name()
-                    .charAt(0), Collectors.counting()
+                    .charAt(0), Collectors.summarizingDouble(Item::price)
             ))
             .forEach((k, v) -> System.out.println(k + " => " + v));
     }
